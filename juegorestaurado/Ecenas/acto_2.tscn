@@ -1,0 +1,105 @@
+[gd_scene load_steps=10 format=3 uid="uid://b31njg41u8a86"]
+
+[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/5.png" id="1_l5yx4"]
+[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imgenes/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="2_tynjl"]
+[ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imgenes/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="3_v5svv"]
+[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imgenes/artworks-000063101559-szvkjn-t500x500-removebg-preview.png" id="4_wtvos"]
+[ext_resource type="FontFile" uid="uid://tlw1bkkq3ign" path="res://Letras/Press_Start_2P/PressStart2P-Regular.ttf" id="5_ovuc0"]
+[ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imgenes/boton-de-emergencia.png" id="6_7fb8e"]
+[ext_resource type="Texture2D" uid="uid://c7hmvvv1dqkvh" path="res://Imgenes/escaner-de-ojos.png" id="7_c0lj2"]
+[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imgenes/globos-de-texto.png" id="8_k366d"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="9_iigoo"]
+
+[node name="acto_2" type="Node2D"]
+
+[node name="Fgris" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.604759, 0.554534)
+texture = ExtResource("1_l5yx4")
+
+[node name="Fazul" type="TextureRect" parent="."]
+offset_left = -5.0
+offset_top = 248.0
+offset_right = 3780.0
+offset_bottom = 4088.0
+scale = Vector2(0.305517, 0.028103)
+texture = ExtResource("2_tynjl")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = -4.0
+offset_top = 356.0
+offset_right = 6620.0
+offset_bottom = 4772.0
+scale = Vector2(0.174507, 0.0539216)
+texture = ExtResource("3_v5svv")
+
+[node name="Pinguino" type="Sprite2D" parent="."]
+position = Vector2(136, 241)
+scale = Vector2(0.534091, 0.45)
+texture = ExtResource("4_wtvos")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 262.0
+offset_top = 256.0
+offset_right = 1410.0
+offset_bottom = 339.0
+scale = Vector2(0.747487, 1.28125)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_ovuc0")
+text = "Estas son las herrmientas que utilizaras."
+
+[node name="Gcdebotones" type="GridContainer" parent="."]
+offset_left = 286.0
+offset_top = 398.0
+offset_right = 1854.0
+offset_bottom = 999.0
+scale = Vector2(0.340886, 0.269119)
+theme_override_constants/h_separation = 136
+theme_override_constants/v_separation = 27
+columns = 3
+
+[node name="Breportar" type="Button" parent="Gcdebotones"]
+layout_mode = 2
+icon = ExtResource("6_7fb8e")
+flat = true
+
+[node name="BEscanner" type="Button" parent="Gcdebotones"]
+layout_mode = 2
+icon = ExtResource("7_c0lj2")
+flat = true
+
+[node name="BMenger" type="Button" parent="Gcdebotones"]
+layout_mode = 2
+icon = ExtResource("8_k366d")
+flat = true
+
+[node name="LReportar" type="Label" parent="Gcdebotones"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "REPORTAR "
+horizontal_alignment = 1
+
+[node name="LEscanner" type="Label" parent="Gcdebotones"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "ESCANNER"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="LMenger" type="Label" parent="Gcdebotones"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "MENGER"
+horizontal_alignment = 1
+
+[node name="Bregresar" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.0990152, 0.0872483)
+icon = ExtResource("9_iigoo")
+flat = true

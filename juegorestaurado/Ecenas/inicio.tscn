@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://ulsdunufa7m5"]
+
+[ext_resource type="Script" uid="uid://chde2a12dd8p4" path="res://Scripts/inicio.gd" id="1_yoswc"]
+[ext_resource type="Texture2D" uid="uid://1ppx2vkyyeo5" path="res://Imgenes/1c5d1f46-c74f-408e-8e79-f48aad0a3b43.jpg" id="2_nbaqw"]
+[ext_resource type="Texture2D" uid="uid://3jsvkmdipcdp" path="res://Imgenes/start-button_6077645-removebg-preview.png" id="3_l2jgd"]
+
+[node name="Inicio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yoswc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 1141.0
+offset_bottom = 945.0
+scale = Vector2(1.118, 0.682743)
+texture = ExtResource("2_nbaqw")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -206.0
+offset_right = 458.0
+offset_bottom = 302.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.549213, 0.398458)
+icon = ExtResource("3_l2jgd")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbccs3ga6gq4e"]
+
+[ext_resource type="Texture2D" uid="uid://dokqywt8xohcv" path="res://Imgenes/Smart Phone Flat Style.jpg" id="1_wko26"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_2h4yb"]
+[ext_resource type="Texture2D" uid="uid://ntvf8s6wsgoh" path="res://Imgenes/3-removebg-preview.png" id="3_qymsr"]
+
+[node name="ConJeniffer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 324.0
+offset_right = 3818.0
+offset_bottom = 6402.0
+scale = Vector2(0.148225, 0.11284)
+texture = ExtResource("1_wko26")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 496.0
+offset_top = 76.0
+offset_right = 951.0
+offset_bottom = 643.0
+scale = Vector2(0.389381, 0.285714)
+icon = ExtResource("3_qymsr")
+flat = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.150653, 0.139485)
+icon = ExtResource("3_2h4yb")
+flat = true

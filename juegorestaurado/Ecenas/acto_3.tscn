@@ -1,0 +1,151 @@
+[gd_scene load_steps=13 format=3 uid="uid://cj8kqhfiotsvb"]
+
+[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/5.png" id="1_od257"]
+[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imgenes/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="2_g0ivk"]
+[ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imgenes/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="3_xfyd8"]
+[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imgenes/artworks-000063101559-szvkjn-t500x500-removebg-preview.png" id="4_uwwt4"]
+[ext_resource type="FontFile" uid="uid://tlw1bkkq3ign" path="res://Letras/Press_Start_2P/PressStart2P-Regular.ttf" id="5_r20s5"]
+[ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imgenes/boton-de-emergencia.png" id="6_i2lju"]
+[ext_resource type="Texture2D" uid="uid://c7hmvvv1dqkvh" path="res://Imgenes/escaner-de-ojos.png" id="7_jgkxo"]
+[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imgenes/globos-de-texto.png" id="8_1ru16"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="9_32xvr"]
+[ext_resource type="Texture2D" uid="uid://cdhhpkmyo7pf5" path="res://Imgenes/1.png" id="9_uwwt4"]
+[ext_resource type="Texture2D" uid="uid://cxm5c60nm0rtc" path="res://Imgenes/2.png" id="10_r20s5"]
+[ext_resource type="Texture2D" uid="uid://dqpyvp1bd3nh2" path="res://Imgenes/3.png" id="11_i2lju"]
+
+[node name="acto_2" type="Node2D"]
+
+[node name="Fgris" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.604759, 0.554534)
+texture = ExtResource("1_od257")
+
+[node name="Fazul" type="TextureRect" parent="."]
+offset_left = 3.0
+offset_top = 269.0
+offset_right = 3788.0
+offset_bottom = 2792.0
+scale = Vector2(0.310057, 0.0319672)
+texture = ExtResource("2_g0ivk")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = -4.0
+offset_top = 356.0
+offset_right = 6620.0
+offset_bottom = 4772.0
+scale = Vector2(0.174507, 0.0539216)
+texture = ExtResource("3_xfyd8")
+
+[node name="Pinguino" type="Sprite2D" parent="."]
+position = Vector2(136, 241)
+scale = Vector2(0.534091, 0.45)
+texture = ExtResource("4_uwwt4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 267.0
+offset_top = 280.0
+offset_right = 1415.0
+offset_bottom = 363.0
+scale = Vector2(0.769912, 1.36667)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_r20s5")
+text = "Estos son los sospechosos que tenemos en la mira."
+
+[node name="Gcbotones" type="GridContainer" parent="."]
+offset_left = 286.0
+offset_top = 398.0
+offset_right = 1854.0
+offset_bottom = 999.0
+scale = Vector2(0.340886, 0.269119)
+theme_override_constants/h_separation = 136
+theme_override_constants/v_separation = 27
+columns = 3
+
+[node name="Breportar" type="Button" parent="Gcbotones"]
+layout_mode = 2
+icon = ExtResource("6_i2lju")
+flat = true
+
+[node name="BEscanner" type="Button" parent="Gcbotones"]
+layout_mode = 2
+icon = ExtResource("7_jgkxo")
+flat = true
+
+[node name="BMenger" type="Button" parent="Gcbotones"]
+layout_mode = 2
+icon = ExtResource("8_1ru16")
+flat = true
+
+[node name="LReportar" type="Label" parent="Gcbotones"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "REPORTAR "
+horizontal_alignment = 1
+
+[node name="LEscanner" type="Label" parent="Gcbotones"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "ESCANNER"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="LMenger" type="Label" parent="Gcbotones"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "MENGER"
+horizontal_alignment = 1
+
+[node name="Gcperfiles" type="GridContainer" parent="."]
+offset_left = 268.0
+offset_top = 30.9999
+offset_right = 2100.0
+offset_bottom = 655.0
+scale = Vector2(0.257678, 0.228751)
+theme_override_constants/h_separation = 136
+theme_override_constants/v_separation = 27
+columns = 3
+
+[node name="BScarlett" type="Button" parent="Gcperfiles"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+icon = ExtResource("9_uwwt4")
+flat = true
+
+[node name="BJeniffer" type="Button" parent="Gcperfiles"]
+layout_mode = 2
+icon = ExtResource("10_r20s5")
+
+[node name="BFernando" type="Button" parent="Gcperfiles"]
+layout_mode = 2
+icon = ExtResource("11_i2lju")
+flat = true
+
+[node name="LScarlett" type="Label" parent="Gcperfiles"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Scarlett"
+horizontal_alignment = 1
+
+[node name="LJeniffer" type="Label" parent="Gcperfiles"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Jeniffer"
+horizontal_alignment = 1
+
+[node name="LFeranando" type="Label" parent="Gcperfiles"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Fernando"
+horizontal_alignment = 1
+
+[node name="Bregresar" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.0990152, 0.0872483)
+icon = ExtResource("9_32xvr")
+flat = true

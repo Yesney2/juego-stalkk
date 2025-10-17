@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn10pqp3pll15"]
+
+[ext_resource type="Texture2D" uid="uid://dqeyrgfrmndsu" path="res://Imgenes/download.png" id="1_pi7lk"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="2_rf113"]
+[ext_resource type="Texture2D" uid="uid://c7hmvvv1dqkvh" path="res://Imgenes/escaner-de-ojos.png" id="3_yu2d2"]
+
+[node name="Escanner" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 3000.0
+offset_bottom = 2000.0
+scale = Vector2(0.386226, 0.970437)
+texture = ExtResource("1_pi7lk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 259.0
+offset_top = 238.0
+offset_right = 951.0
+offset_bottom = 474.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Esanner de enlaces: "
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+text = "\"pega o escribe enlaces aqui\""
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Ecannear"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Pegar"
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Limpiar"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HTTPRequest" type="HTTPRequest" parent="VBoxContainer"]
+
+[node name="Bregresar" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.0990152, 0.0872483)
+icon = ExtResource("2_rf113")
+flat = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 6.0
+offset_right = 951.0
+offset_bottom = 518.0
+scale = Vector2(0.445431, 0.363625)
+texture = ExtResource("3_yu2d2")
