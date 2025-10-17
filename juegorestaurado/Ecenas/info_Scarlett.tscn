@@ -41,9 +41,9 @@ text = "Hobbits: Fotografía urbana, pintura digital y coleccionar vinilos.
 visible_characters_behavior = 1
 
 [node name="Datosparte2" type="RichTextLabel" parent="CanvasLayer"]
-offset_left = 600.0
+offset_left = 599.0
 offset_top = 35.0
-offset_right = 860.0
+offset_right = 859.0
 offset_bottom = 310.0
 bbcode_enabled = true
 text = "Nombre: Scarlett Álvarez

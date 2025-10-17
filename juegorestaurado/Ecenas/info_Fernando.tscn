@@ -57,10 +57,10 @@ Vive cerca de un barrio industrial.
 Ocupación: Técnico en mantenimiento."
 
 [node name="Bregresar" type="Button" parent="CanvasLayer"]
-offset_left = 194.0
-offset_top = 13.0
-offset_right = 702.0
-offset_bottom = 521.0
-scale = Vector2(0.10276, 0.0788195)
+offset_left = 311.0
+offset_top = 489.0
+offset_right = 819.0
+offset_bottom = 997.0
+scale = Vector2(0.321078, 0.252499)
 icon = ExtResource("3_1ow8n")
 flat = true
