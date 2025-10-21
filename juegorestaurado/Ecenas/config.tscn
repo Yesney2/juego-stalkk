@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://b8r5474sd13r0"]
 
 [ext_resource type="Script" uid="uid://ch5b1x4t1bedr" path="res://Scripts/config.gd" id="1_jh5oj"]
-[ext_resource type="Texture2D" uid="uid://bpc40hy878nwe" path="res://Imgenes/6053836.jpg" id="1_u0s2d"]
-[ext_resource type="Texture2D" uid="uid://e5jx7t641kfr" path="res://Imgenes/opcciones-removebg-preview.png" id="2_jh5oj"]
-[ext_resource type="Texture2D" uid="uid://3dwm0pfu5svq" path="res://Imgenes/salir-removebg-preview.png" id="3_8bllp"]
+[ext_resource type="Texture2D" uid="uid://bpc40hy878nwe" path="res://Imgenes/Fondos/6053836.jpg" id="1_u0s2d"]
+[ext_resource type="Texture2D" uid="uid://e5jx7t641kfr" path="res://Imgenes/Botones/opcciones-removebg-preview.png" id="2_jh5oj"]
+[ext_resource type="Texture2D" uid="uid://3dwm0pfu5svq" path="res://Imgenes/Botones/salir-removebg-preview.png" id="3_8bllp"]
 
 [node name="Config" type="Control"]
 layout_mode = 3

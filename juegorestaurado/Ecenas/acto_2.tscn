@@ -1,16 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://b31njg41u8a86"]
+[gd_scene load_steps=12 format=3 uid="uid://b31njg41u8a86"]
 
-[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/5.png" id="1_l5yx4"]
-[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imgenes/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="2_tynjl"]
-[ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imgenes/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="3_v5svv"]
-[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imgenes/artworks-000063101559-szvkjn-t500x500-removebg-preview.png" id="4_wtvos"]
+[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/Fondos/5.png" id="1_l5yx4"]
+[ext_resource type="Script" uid="uid://bt63sg2fco3kv" path="res://Scripts/acto_2.gd" id="1_v5svv"]
+[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imgenes/Fondos/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="2_tynjl"]
+[ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imgenes/Fondos/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="3_v5svv"]
+[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imgenes/Personajes/AgenteP.png" id="4_wtvos"]
 [ext_resource type="FontFile" uid="uid://tlw1bkkq3ign" path="res://Letras/Press_Start_2P/PressStart2P-Regular.ttf" id="5_ovuc0"]
-[ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imgenes/boton-de-emergencia.png" id="6_7fb8e"]
-[ext_resource type="Texture2D" uid="uid://c7hmvvv1dqkvh" path="res://Imgenes/escaner-de-ojos.png" id="7_c0lj2"]
-[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imgenes/globos-de-texto.png" id="8_k366d"]
-[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="9_iigoo"]
+[ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imgenes/Botones/boton-de-emergencia.png" id="6_7fb8e"]
+[ext_resource type="Texture2D" uid="uid://c7hmvvv1dqkvh" path="res://Imgenes/Botones/escaner-de-ojos.png" id="7_c0lj2"]
+[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imgenes/Botones/globos-de-texto.png" id="8_k366d"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="9_iigoo"]
+[ext_resource type="Texture2D" uid="uid://hgm0jjflkm8t" path="res://Imgenes/Botones/Bcontinuar.png" id="11_wtvos"]
 
 [node name="acto_2" type="Node2D"]
+script = ExtResource("1_v5svv")
 
 [node name="Fgris" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -48,7 +51,7 @@ offset_right = 1410.0
 offset_bottom = 339.0
 scale = Vector2(0.747487, 1.28125)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer"]
+[node name="Texto2" type="RichTextLabel" parent="CanvasLayer/PanelContainer"]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_ovuc0")
 text = "Estas son las herrmientas que utilizaras."
@@ -103,3 +106,17 @@ offset_bottom = 8.0
 scale = Vector2(0.0990152, 0.0872483)
 icon = ExtResource("9_iigoo")
 flat = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1035.0
+offset_top = 359.0
+offset_right = 1502.0
+offset_bottom = 835.0
+scale = Vector2(0.139683, 0.13198)
+icon = ExtResource("11_wtvos")
+flat = true
+
+[connection signal="pressed" from="Gcdebotones/Breportar" to="." method="_on_breportar_pressed"]
+[connection signal="pressed" from="Gcdebotones/BEscanner" to="." method="_on_bescanner_pressed"]
+[connection signal="pressed" from="Gcdebotones/BMenger" to="." method="_on_bmenger_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

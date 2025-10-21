@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2nsbiou5p23"]
+[gd_scene load_steps=5 format=3 uid="uid://d2nsbiou5p23"]
 
 [ext_resource type="Texture2D" uid="uid://dokqywt8xohcv" path="res://Imgenes/Smart Phone Flat Style.jpg" id="1_4ncpx"]
-[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_vp66t"]
-[ext_resource type="Texture2D" uid="uid://b6801qrql20ie" path="res://Imgenes/2-removebg-preview.png" id="4_775j8"]
+[ext_resource type="Script" uid="uid://do6kx1vrruesr" path="res://Scripts/con_fernando.gd" id="1_un8kp"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_vp66t"]
+[ext_resource type="Texture2D" uid="uid://b6801qrql20ie" path="res://Imgenes/Personajes/2-removebg-preview.png" id="4_775j8"]
 
 [node name="ConFeranando" type="Control"]
 layout_mode = 3
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_un8kp")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -21,6 +23,7 @@ scale = Vector2(0.148225, 0.11284)
 texture = ExtResource("1_4ncpx")
 
 [node name="Button2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 493.0
 offset_top = 67.0
 offset_right = 948.0
@@ -29,10 +32,12 @@ scale = Vector2(0.402369, 0.343334)
 icon = ExtResource("4_775j8")
 flat = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Bregresar" type="Button" parent="."]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 scale = Vector2(0.188341, 0.163121)
 icon = ExtResource("3_vp66t")
 flat = true
+
+[connection signal="pressed" from="Bregresar" to="." method="_on_bregresar_pressed"]

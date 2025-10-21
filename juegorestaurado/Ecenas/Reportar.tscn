@@ -1,14 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://c008x4k7dt7np"]
+[gd_scene load_steps=9 format=3 uid="uid://c008x4k7dt7np"]
 
-[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/5.png" id="1_vc0wm"]
-[ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imgenes/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="3_76v0s"]
-[ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imgenes/boton-de-emergencia.png" id="6_ptsys"]
-[ext_resource type="Texture2D" uid="uid://cdhhpkmyo7pf5" path="res://Imgenes/1.png" id="9_y07om"]
-[ext_resource type="Texture2D" uid="uid://cxm5c60nm0rtc" path="res://Imgenes/2.png" id="10_xyj3v"]
-[ext_resource type="Texture2D" uid="uid://dqpyvp1bd3nh2" path="res://Imgenes/3.png" id="11_vfvli"]
-[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="12_qgxn0"]
+[ext_resource type="Script" uid="uid://dutie5st3l5l7" path="res://Scripts/reportar.gd" id="1_gr0ew"]
+[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/Fondos/5.png" id="1_vc0wm"]
+[ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imgenes/Fondos/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="3_76v0s"]
+[ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imgenes/Botones/boton-de-emergencia.png" id="6_ptsys"]
+[ext_resource type="Texture2D" uid="uid://cdhhpkmyo7pf5" path="res://Imgenes/Personajes/1.png" id="9_y07om"]
+[ext_resource type="Texture2D" uid="uid://cxm5c60nm0rtc" path="res://Imgenes/Personajes/2.png" id="10_xyj3v"]
+[ext_resource type="Texture2D" uid="uid://dqpyvp1bd3nh2" path="res://Imgenes/Personajes/3.png" id="11_vfvli"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="12_qgxn0"]
 
 [node name="acto_2" type="Node2D"]
+script = ExtResource("1_gr0ew")
 
 [node name="Fgris" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -92,3 +94,5 @@ offset_bottom = 8.0
 scale = Vector2(0.0990152, 0.0872483)
 icon = ExtResource("12_qgxn0")
 flat = true
+
+[connection signal="pressed" from="Bregresar" to="." method="_on_bregresar_pressed"]

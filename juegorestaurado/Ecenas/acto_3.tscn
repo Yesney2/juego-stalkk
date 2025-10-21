@@ -1,19 +1,21 @@
-[gd_scene load_steps=13 format=3 uid="uid://cj8kqhfiotsvb"]
+[gd_scene load_steps=14 format=3 uid="uid://cj8kqhfiotsvb"]
 
-[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/5.png" id="1_od257"]
-[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imgenes/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="2_g0ivk"]
-[ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imgenes/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="3_xfyd8"]
-[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imgenes/artworks-000063101559-szvkjn-t500x500-removebg-preview.png" id="4_uwwt4"]
+[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/Fondos/5.png" id="1_od257"]
+[ext_resource type="Script" uid="uid://mco4wm8fnxt0" path="res://Scripts/acto_3.gd" id="1_r20s5"]
+[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imgenes/Fondos/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="2_g0ivk"]
+[ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imgenes/Fondos/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="3_xfyd8"]
+[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imgenes/Personajes/AgenteP.png" id="4_uwwt4"]
 [ext_resource type="FontFile" uid="uid://tlw1bkkq3ign" path="res://Letras/Press_Start_2P/PressStart2P-Regular.ttf" id="5_r20s5"]
-[ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imgenes/boton-de-emergencia.png" id="6_i2lju"]
-[ext_resource type="Texture2D" uid="uid://c7hmvvv1dqkvh" path="res://Imgenes/escaner-de-ojos.png" id="7_jgkxo"]
-[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imgenes/globos-de-texto.png" id="8_1ru16"]
-[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="9_32xvr"]
-[ext_resource type="Texture2D" uid="uid://cdhhpkmyo7pf5" path="res://Imgenes/1.png" id="9_uwwt4"]
-[ext_resource type="Texture2D" uid="uid://cxm5c60nm0rtc" path="res://Imgenes/2.png" id="10_r20s5"]
-[ext_resource type="Texture2D" uid="uid://dqpyvp1bd3nh2" path="res://Imgenes/3.png" id="11_i2lju"]
+[ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imgenes/Botones/boton-de-emergencia.png" id="6_i2lju"]
+[ext_resource type="Texture2D" uid="uid://c7hmvvv1dqkvh" path="res://Imgenes/Botones/escaner-de-ojos.png" id="7_jgkxo"]
+[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imgenes/Botones/globos-de-texto.png" id="8_1ru16"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="9_32xvr"]
+[ext_resource type="Texture2D" uid="uid://cdhhpkmyo7pf5" path="res://Imgenes/Personajes/1.png" id="9_uwwt4"]
+[ext_resource type="Texture2D" uid="uid://cxm5c60nm0rtc" path="res://Imgenes/Personajes/2.png" id="10_r20s5"]
+[ext_resource type="Texture2D" uid="uid://dqpyvp1bd3nh2" path="res://Imgenes/Personajes/3.png" id="11_i2lju"]
 
-[node name="acto_2" type="Node2D"]
+[node name="acto_3" type="Node2D"]
+script = ExtResource("1_r20s5")
 
 [node name="Fgris" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -149,3 +151,11 @@ offset_bottom = 8.0
 scale = Vector2(0.0990152, 0.0872483)
 icon = ExtResource("9_32xvr")
 flat = true
+
+[connection signal="pressed" from="Gcbotones/Breportar" to="." method="_on_breportar_pressed"]
+[connection signal="pressed" from="Gcbotones/BEscanner" to="." method="_on_b_escanner_pressed"]
+[connection signal="pressed" from="Gcbotones/BMenger" to="." method="_on_b_menger_pressed"]
+[connection signal="pressed" from="Gcperfiles/BScarlett" to="." method="_on_bscarlett_pressed"]
+[connection signal="pressed" from="Gcperfiles/BJeniffer" to="." method="_on_bjeniffer_pressed"]
+[connection signal="pressed" from="Gcperfiles/BFernando" to="." method="_on_bfernando_pressed"]
+[connection signal="pressed" from="Bregresar" to="." method="_on_bregresar_pressed"]

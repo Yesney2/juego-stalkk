@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://silg88c5lvvd"]
+[gd_scene load_steps=6 format=3 uid="uid://silg88c5lvvd"]
 
-[ext_resource type="Texture2D" uid="uid://dvjlga4b5fcx8" path="res://Imgenes/9b9b9b.png" id="1_3m571"]
-[ext_resource type="Texture2D" uid="uid://cdhhpkmyo7pf5" path="res://Imgenes/1.png" id="2_3m571"]
-[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_6slfk"]
+[ext_resource type="Texture2D" uid="uid://dvjlga4b5fcx8" path="res://Imgenes/Fondos/9b9b9b.png" id="1_3m571"]
+[ext_resource type="Script" uid="uid://cygbm83a2h43e" path="res://Scripts/info_scarlett.gd" id="1_i3svn"]
+[ext_resource type="Texture2D" uid="uid://cdhhpkmyo7pf5" path="res://Imgenes/Personajes/1.png" id="2_3m571"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_6slfk"]
+[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imgenes/Botones/globos-de-texto.png" id="5_8i2ep"]
 
 [node name="Info_Fernando" type="Node2D"]
+script = ExtResource("1_i3svn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -18,7 +21,7 @@ offset_left = 253.0
 offset_top = -2.0
 offset_right = 1413.0
 offset_bottom = 1158.0
-scale = Vector2(0.569048, 0.524096)
+scale = Vector2(0.602821, 0.560906)
 texture = ExtResource("1_3m571")
 
 [node name="FScarlett" type="TextureRect" parent="CanvasLayer"]
@@ -57,10 +60,22 @@ Nacimiento: 12 de junio de 2000.
 Ocupación: Diseñadora gráfica freelance."
 
 [node name="Bregresar" type="Button" parent="CanvasLayer"]
-offset_left = 194.0
-offset_top = 13.0
-offset_right = 702.0
-offset_bottom = 521.0
-scale = Vector2(0.10276, 0.0788195)
+offset_left = 311.0
+offset_top = 498.0
+offset_right = 819.0
+offset_bottom = 1006.0
+scale = Vector2(0.306075, 0.251745)
 icon = ExtResource("3_6slfk")
 flat = true
+
+[node name="Menger" type="Button" parent="CanvasLayer"]
+offset_left = 646.0
+offset_top = 474.0
+offset_right = 1166.0
+offset_bottom = 994.0
+scale = Vector2(0.352568, 0.315939)
+icon = ExtResource("5_8i2ep")
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/Bregresar" to="." method="_on_bregresar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menger" to="." method="_on_menger_pressed"]

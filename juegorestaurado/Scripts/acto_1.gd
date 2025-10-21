@@ -12,3 +12,8 @@ func _ready() -> void:
 
 func _on_dialog_finished() -> void:
 	print("Diálogo terminado — activar la jugabilidad")
+
+
+
+func _on_siguiente_pressed() -> void:
+	get_tree().change_scene_to_file("res://Ecenas/acto_2.tscn")

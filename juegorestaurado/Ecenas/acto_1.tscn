@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbl3yt6xq44yi"]
+[gd_scene load_steps=8 format=3 uid="uid://dbl3yt6xq44yi"]
 
 [ext_resource type="Script" uid="uid://daplq3l7hbp30" path="res://Scripts/acto_1.gd" id="1_id2ws"]
-[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/5.png" id="1_npgcn"]
-[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imgenes/artworks-000063101559-szvkjn-t500x500-removebg-preview.png" id="2_fsw3c"]
+[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/Fondos/5.png" id="1_npgcn"]
+[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imgenes/Personajes/AgenteP.png" id="2_fsw3c"]
 [ext_resource type="FontFile" uid="uid://tlw1bkkq3ign" path="res://Letras/Press_Start_2P/PressStart2P-Regular.ttf" id="4_hnntw"]
-[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imgenes/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="4_id2ws"]
+[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imgenes/Fondos/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="4_id2ws"]
 [ext_resource type="Script" uid="uid://c8culcvf0rmsw" path="res://Scripts/panel_container.gd" id="4_t3pob"]
+[ext_resource type="Texture2D" uid="uid://hgm0jjflkm8t" path="res://Imgenes/Botones/Bcontinuar.png" id="7_31ssc"]
 
 [node name="Acto1" type="Node2D"]
 script = ExtResource("1_id2ws")
@@ -37,12 +38,6 @@ position = Vector2(145, 224)
 scale = Vector2(0.554, 0.626)
 texture = ExtResource("2_fsw3c")
 
-[node name="Siguiente" type="Button" parent="."]
-offset_left = 1022.0
-offset_top = 394.0
-offset_right = 1134.0
-offset_bottom = 507.0
-
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 3.99997
 offset_top = 370.0
@@ -50,3 +45,13 @@ offset_right = 3789.0
 offset_bottom = 2893.0
 scale = Vector2(0.30144, 0.110599)
 texture = ExtResource("4_id2ws")
+
+[node name="Siguiente" type="Button" parent="."]
+offset_left = 1058.0
+offset_top = 377.0
+offset_right = 1525.0
+offset_bottom = 853.0
+scale = Vector2(0.161607, 0.133507)
+icon = ExtResource("7_31ssc")
+
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]

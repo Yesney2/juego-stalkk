@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnq3hah6x6qw"]
+[gd_scene load_steps=6 format=3 uid="uid://dnq3hah6x6qw"]
 
-[ext_resource type="Texture2D" uid="uid://dvjlga4b5fcx8" path="res://Imgenes/9b9b9b.png" id="1_dw5wv"]
-[ext_resource type="Texture2D" uid="uid://dqpyvp1bd3nh2" path="res://Imgenes/3.png" id="2_1ow8n"]
-[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_1ow8n"]
+[ext_resource type="Texture2D" uid="uid://dvjlga4b5fcx8" path="res://Imgenes/Fondos/9b9b9b.png" id="1_dw5wv"]
+[ext_resource type="Script" uid="uid://i4itaonn1p8k" path="res://Scripts/info_fernando.gd" id="1_icbuc"]
+[ext_resource type="Texture2D" uid="uid://dqpyvp1bd3nh2" path="res://Imgenes/Personajes/3.png" id="2_1ow8n"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_1ow8n"]
+[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imgenes/Botones/globos-de-texto.png" id="4_xddsu"]
 
 [node name="Info_Fernando" type="Node2D"]
+script = ExtResource("1_icbuc")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -56,11 +59,23 @@ Vive cerca de un barrio industrial.
 
 Ocupación: Técnico en mantenimiento."
 
+[node name="Menger" type="Button" parent="CanvasLayer"]
+offset_left = 649.0
+offset_top = 465.0
+offset_right = 1169.0
+offset_bottom = 985.0
+scale = Vector2(0.386394, 0.333443)
+icon = ExtResource("4_xddsu")
+flat = true
+
 [node name="Bregresar" type="Button" parent="CanvasLayer"]
-offset_left = 311.0
-offset_top = 489.0
-offset_right = 819.0
-offset_bottom = 997.0
+offset_left = 296.0
+offset_top = 482.0
+offset_right = 804.0
+offset_bottom = 990.0
 scale = Vector2(0.321078, 0.252499)
 icon = ExtResource("3_1ow8n")
 flat = true
+
+[connection signal="pressed" from="CanvasLayer/Menger" to="." method="_on_menger_pressed"]
+[connection signal="pressed" from="CanvasLayer/Bregresar" to="." method="_on_bregresar_pressed"]
