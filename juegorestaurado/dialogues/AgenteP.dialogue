@@ -1,0 +1,38 @@
+title: Pingu
+~ start
+Agente P: Saludos soy el agente P. Encargado de proteger a los ciudadanos del hackeo y robo de datos, y ahora tambien es tu deber como nuevo agente!!!
+Agente P: Tu deber será encontrar al hacker de una lista de posibles sosechosos que trabajan para.. [wait=2]E.Snowden.
+Agente P: Un famoso hacker Estadounidense especializado en phishing.
+Agente P: ¿Conoces el método de estafa phishing? ¿verdad?
+- Si claro, obvio que lo sé.
+   Agente P: ¡Excelente! ¿Quieres una pequeña retroalimentación ?
+  - Sí 
+      Agente P:  El phishing es un ataque donde un hacker se hace pasar por otra persona o empresa, para robar contraseñas, correos o dinero electrónico.
+	  -Continuar 
+  - No 
+      - Continuar.
+- Conozco un poco del tema pero aún no conozco bien.  
+   Agente P: Bueno, antes de empezar te haré una pequeña pregunta para ver si eres apto.
+   Agente P: ¿Qué es el phishing?
+      - Un método de pesca.
+      Agente P: No… esa es pesca de verdad, no ciberataques.
+              - Continuar. 
+      - Un método de extorsión donde se roban la identidad de una persona para hacerse pasar por otra.
+         Agente P: ¡Exacto! Esa es la respuesta correcta. Ya estás listo para continuar.
+              - Continuar.
+      - Un método de extorsión para robarte pescado. 
+        Agente P: JAJAJA, nada que ver con pescado 
+         - Continuar. 
+- No tengo idea. 
+    Agente P: El phishing es un ciberataque donde los hackers se hacen pasar por otras personas o empresas, creando perfiles o páginas falsas disfrazadas de legítimas. Su objetivo es robar datos personales como contraseñas, números de celular, correos y dinero electrónico.
+    - Continuar.
+
+Agente P:  Bueno y que recientemente detenido por sus crímenes pero su o sus complices siguen lubres y por eso está agencia te necesita.
+Agente P: Tendras acceso a los perfiles de los sospechosos y podrás conversar con ellos, ¿Confía en tus instintos agente!! y recuerda ¡NADA ES LOS QUE PARECE!
+Agente P: Desde ahoara me dirigiré contigo como agente Kobac ese será tu nombre clave.
+Agente P: ¿Estas listo para empezar agente Kobac?
+- Si, listo.
+  Agente P: sabiamos que podíamos contar con tu ayuda
+- No, me puedo retirar.
+ 
+=> END

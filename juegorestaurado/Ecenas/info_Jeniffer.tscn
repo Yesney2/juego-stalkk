@@ -33,12 +33,16 @@ scale = Vector2(0.300702, 0.276897)
 texture = ExtResource("2_cbijm")
 
 [node name="Datosparte1" type="RichTextLabel" parent="CanvasLayer"]
-offset_left = 308.0
-offset_top = 332.0
-offset_right = 758.0
-offset_bottom = 510.0
+offset_left = 313.0
+offset_top = 312.0
+offset_right = 763.0
+offset_bottom = 490.0
 scale = Vector2(1.13308, 0.982192)
-text = "Sospechosa por usar la aplicación de Menger, mismo que fue utilizada para robar el dinero de los padres de familia."
+text = "Hobbit:
+Le gusta ver foros de internet, navega por la darkweb.
+
+Sospechoso:
+su cuenta escolar recibió mensajes con enlaces y archivos; tiene contacto con los dos perfiles falsos y podría haber sido manipulada para entregar información o archivos sin saberlo."
 
 [node name="Datosparte2" type="RichTextLabel" parent="CanvasLayer"]
 offset_left = 597.0
@@ -57,20 +61,20 @@ Nacimiento: 20 de septiembre de 2010.
 Ocupación: Estudiante de secundaria."
 
 [node name="Bregresar" type="Button" parent="CanvasLayer"]
-offset_left = 302.0
-offset_top = 429.0
-offset_right = 810.0
-offset_bottom = 937.0
-scale = Vector2(0.329511, 0.285381)
+offset_left = 355.0
+offset_top = 505.0
+offset_right = 863.0
+offset_bottom = 1013.0
+scale = Vector2(0.185962, 0.140468)
 icon = ExtResource("3_cq3jv")
 flat = true
 
 [node name="Menger" type="Button" parent="CanvasLayer"]
-offset_left = 641.0
-offset_top = 424.0
-offset_right = 1161.0
-offset_bottom = 944.0
-scale = Vector2(0.344517, 0.335526)
+offset_left = 665.0
+offset_top = 493.0
+offset_right = 1185.0
+offset_bottom = 1013.0
+scale = Vector2(0.194094, 0.1917)
 icon = ExtResource("5_kxb50")
 flat = true
 

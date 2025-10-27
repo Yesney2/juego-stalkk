@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvfwq5smf58qa"
+path="res://.godot/imported/jeniffer.dialogue-a726ca4e2a417368e4513a1b39a7e275.tres"
+
+[deps]
+
+source_file="res://dialogues/jeniffer.dialogue"
+dest_files=["res://.godot/imported/jeniffer.dialogue-a726ca4e2a417368e4513a1b39a7e275.tres"]
+
+[params]
+
+defaults=true

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cv0b0n522bdx5"]
+[gd_scene load_steps=7 format=3 uid="uid://cv0b0n522bdx5"]
 
 [ext_resource type="Script" uid="uid://bccne8ayf7u7g" path="res://Scripts/menu.gd" id="1_xjki6"]
 [ext_resource type="Texture2D" uid="uid://bpc40hy878nwe" path="res://Imgenes/Fondos/6053836.jpg" id="2_dyfpn"]
 [ext_resource type="Texture2D" uid="uid://bn3b0crve2ra2" path="res://Imgenes/Botones/90Z_2109.w032.n003.95B.p1.95-removebg-preview.png" id="3_76hkc"]
+[ext_resource type="AudioStream" uid="uid://dsf503qfnytkk" path="res://Audio/gotabutton.wav" id="4_dyfpn"]
 [ext_resource type="Texture2D" uid="uid://e5jx7t641kfr" path="res://Imgenes/Botones/opcciones-removebg-preview.png" id="4_rby0t"]
 [ext_resource type="Texture2D" uid="uid://3dwm0pfu5svq" path="res://Imgenes/Botones/salir-removebg-preview.png" id="5_alsua"]
 
@@ -44,15 +45,24 @@ layout_mode = 2
 icon = ExtResource("3_76hkc")
 flat = true
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Bjugar"]
+stream = ExtResource("4_dyfpn")
+
 [node name="Bopcciones" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("4_rby0t")
 flat = true
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Bopcciones"]
+stream = ExtResource("4_dyfpn")
+
 [node name="Salir" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("5_alsua")
 flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Salir"]
+stream = ExtResource("4_dyfpn")
 
 [connection signal="pressed" from="VBoxContainer/Bjugar" to="." method="_on_bjugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/Bopcciones" to="." method="_on_bopcciones_pressed"]

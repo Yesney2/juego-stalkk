@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imgenes/Fondos/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="2_g0ivk"]
 [ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imgenes/Fondos/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="3_xfyd8"]
 [ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imgenes/Personajes/AgenteP.png" id="4_uwwt4"]
-[ext_resource type="FontFile" uid="uid://tlw1bkkq3ign" path="res://Letras/Press_Start_2P/PressStart2P-Regular.ttf" id="5_r20s5"]
+[ext_resource type="FontFile" uid="uid://tlw1bkkq3ign" path="res://Letras/MiFuente.ttf" id="5_r20s5"]
 [ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imgenes/Botones/boton-de-emergencia.png" id="6_i2lju"]
 [ext_resource type="Texture2D" uid="uid://c7hmvvv1dqkvh" path="res://Imgenes/Botones/escaner-de-ojos.png" id="7_jgkxo"]
 [ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imgenes/Botones/globos-de-texto.png" id="8_1ru16"]

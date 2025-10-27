@@ -10,10 +10,13 @@ func _ready() -> void:
 		$VBoxContainer/Salir.pressed.connect(_on_salir_pressed)
 
 func _on_bjugar_pressed() -> void:
+	$VBoxContainer/Bjugar/AudioStreamPlayer.play()
 	get_tree().change_scene_to_file("res://Ecenas/acto_1.tscn")
 
 func _on_bopcciones_pressed() -> void:
+	$VBoxContainer/Bopcciones/AudioStreamPlayer.play()
 	get_tree().change_scene_to_file("res://Ecenas/config.tscn")
 
 func _on_salir_pressed() -> void:
+	$VBoxContainer/Salir/AudioStreamPlayer.play()
 	get_tree().quit()

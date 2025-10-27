@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cu1jdbfq5emq6"
+path="res://.godot/imported/Scarllet.dialogue-f157c798f98c29db36616e752aefeea1.tres"
+
+[deps]
+
+source_file="res://dialogues/Scarllet.dialogue"
+dest_files=["res://.godot/imported/Scarllet.dialogue-f157c798f98c29db36616e752aefeea1.tres"]
+
+[params]
+
+defaults=true

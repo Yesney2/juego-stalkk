@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ll0xgrqago8c"
+path="res://.godot/imported/AgenteP.dialogue-4fba09907b41a29ac539a982815ec1f5.tres"
+
+[deps]
+
+source_file="res://dialogues/AgenteP.dialogue"
+dest_files=["res://.godot/imported/AgenteP.dialogue-4fba09907b41a29ac539a982815ec1f5.tres"]
+
+[params]
+
+defaults=true

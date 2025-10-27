@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bq50iivi8jvi7"
+path="res://.godot/imported/Fernando.dialogue-17d2a98c0edc5c616125716aecb5400c.tres"
+
+[deps]
+
+source_file="res://dialogues/Fernando.dialogue"
+dest_files=["res://.godot/imported/Fernando.dialogue-17d2a98c0edc5c616125716aecb5400c.tres"]
+
+[params]
+
+defaults=true

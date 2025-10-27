@@ -38,10 +38,11 @@ offset_top = 332.0
 offset_right = 758.0
 offset_bottom = 510.0
 scale = Vector2(1.13308, 0.982192)
-text = "Hobbits:  Boxeo, coleccionar relojes, participar en foros de hacking
+text = "Hobbits:  
+Boxeo, coleccionar relojes, participar en foros de hacking
 
-Sospechoso: Su ocupación real no coincide con sus movimientos online.
- Tiene antecedentes por delitos cibernéticos"
+Sospechoso por: 
+Aparece en registros del foro «ShadowClock» donde se comparten exploits ligeros (posts con pistas, no código dañino). Su trabajo de mantenimiento le daría acceso a instalaciones y redes físicas — ideal para colocación de dispositivos. El perfil contiene inconsistencias (fechas, fotos de stock como avatar)"
 
 [node name="Datosparte2" type="RichTextLabel" parent="CanvasLayer"]
 offset_left = 600.0
@@ -60,20 +61,20 @@ Vive cerca de un barrio industrial.
 Ocupación: Técnico en mantenimiento."
 
 [node name="Menger" type="Button" parent="CanvasLayer"]
-offset_left = 649.0
-offset_top = 465.0
-offset_right = 1169.0
-offset_bottom = 985.0
-scale = Vector2(0.386394, 0.333443)
+offset_left = 644.0
+offset_top = 524.0
+offset_right = 1164.0
+offset_bottom = 1044.0
+scale = Vector2(0.236968, 0.198986)
 icon = ExtResource("4_xddsu")
 flat = true
 
 [node name="Bregresar" type="Button" parent="CanvasLayer"]
-offset_left = 296.0
-offset_top = 482.0
-offset_right = 804.0
-offset_bottom = 990.0
-scale = Vector2(0.321078, 0.252499)
+offset_left = 330.0
+offset_top = 540.0
+offset_right = 838.0
+offset_bottom = 1048.0
+scale = Vector2(0.214742, 0.154037)
 icon = ExtResource("3_1ow8n")
 flat = true
 

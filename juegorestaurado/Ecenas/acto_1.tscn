@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbl3yt6xq44yi"]
+[gd_scene load_steps=7 format=3 uid="uid://dbl3yt6xq44yi"]
 
 [ext_resource type="Script" uid="uid://daplq3l7hbp30" path="res://Scripts/acto_1.gd" id="1_id2ws"]
 [ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/Fondos/5.png" id="1_npgcn"]
 [ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imgenes/Personajes/AgenteP.png" id="2_fsw3c"]
-[ext_resource type="FontFile" uid="uid://tlw1bkkq3ign" path="res://Letras/Press_Start_2P/PressStart2P-Regular.ttf" id="4_hnntw"]
+[ext_resource type="FontFile" uid="uid://tlw1bkkq3ign" path="res://Letras/MiFuente.ttf" id="3_hnntw"]
 [ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imgenes/Fondos/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="4_id2ws"]
-[ext_resource type="Script" uid="uid://c8culcvf0rmsw" path="res://Scripts/panel_container.gd" id="4_t3pob"]
 [ext_resource type="Texture2D" uid="uid://hgm0jjflkm8t" path="res://Imgenes/Botones/Bcontinuar.png" id="7_31ssc"]
 
 [node name="Acto1" type="Node2D"]
@@ -27,11 +26,10 @@ offset_top = 394.0
 offset_right = 704.0
 offset_bottom = 597.0
 scale = Vector2(0.885246, 0.970105)
-script = ExtResource("4_t3pob")
 
 [node name="DialogLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer"]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("4_hnntw")
+theme_override_fonts/normal_font = ExtResource("3_hnntw")
 
 [node name="Piguino" type="Sprite2D" parent="."]
 position = Vector2(145, 224)
@@ -39,7 +37,7 @@ scale = Vector2(0.554, 0.626)
 texture = ExtResource("2_fsw3c")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 3.99997
+offset_left = 4.0
 offset_top = 370.0
 offset_right = 3789.0
 offset_bottom = 2893.0
