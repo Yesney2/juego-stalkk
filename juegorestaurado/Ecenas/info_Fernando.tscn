@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://dnq3hah6x6qw"]
 
-[ext_resource type="Texture2D" uid="uid://dvjlga4b5fcx8" path="res://Imgenes/Fondos/9b9b9b.png" id="1_dw5wv"]
+[ext_resource type="Texture2D" uid="uid://dvjlga4b5fcx8" path="res://Imagenes/Fondos/9b9b9b.png" id="1_dw5wv"]
 [ext_resource type="Script" uid="uid://i4itaonn1p8k" path="res://Scripts/info_fernando.gd" id="1_icbuc"]
-[ext_resource type="Texture2D" uid="uid://dqpyvp1bd3nh2" path="res://Imgenes/Personajes/3.png" id="2_1ow8n"]
-[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_1ow8n"]
-[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imgenes/Botones/globos-de-texto.png" id="4_xddsu"]
+[ext_resource type="Texture2D" uid="uid://dqpyvp1bd3nh2" path="res://Imagenes/Personajes/3.png" id="2_1ow8n"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_1ow8n"]
+[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imagenes/Botones/globos-de-texto.png" id="4_xddsu"]
 
 [node name="Info_Fernando" type="Node2D"]
 script = ExtResource("1_icbuc")
@@ -17,11 +17,11 @@ offset_bottom = 40.0
 scale = Vector2(28.8881, 17.8337)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = 247.0
-offset_top = 5.0
-offset_right = 1407.0
-offset_bottom = 1224.0
-scale = Vector2(0.569048, 0.524096)
+offset_left = 1.00002
+offset_top = 2.0
+offset_right = 1161.0
+offset_bottom = 1221.0
+scale = Vector2(10.3371, 0.621756)
 texture = ExtResource("1_dw5wv")
 
 [node name="Ffernando" type="TextureRect" parent="CanvasLayer"]
@@ -77,6 +77,9 @@ offset_bottom = 1048.0
 scale = Vector2(0.214742, 0.154037)
 icon = ExtResource("3_1ow8n")
 flat = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(645, 359)
 
 [connection signal="pressed" from="CanvasLayer/Menger" to="." method="_on_menger_pressed"]
 [connection signal="pressed" from="CanvasLayer/Bregresar" to="." method="_on_bregresar_pressed"]

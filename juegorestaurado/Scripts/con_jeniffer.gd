@@ -1,44 +1,39 @@
-extends Node2D
+extends Control
 
-# (Opcional) si vas a usar el botón "Siguiente" para pasar a la siguiente escena cuando acabe el diálogo
-@onready var boton_siguiente: Button = $Siguiente
+@onready var sprite := $AnimatedSprite2D
 
 func _ready() -> void:
-	# Desactiva el botón hasta que termine el diálogo (opcional)
-	if is_instance_valid(boton_siguiente):
-		boton_siguiente.disabled = true
+	_start_dialogue()
 
-	# Carga el recurso de diálogo y lo muestra
-	var d: DialogueResource = load("res://dialogues/Pingu.dialogue")
-	# "start" es el título del nodo de inicio en el .dialogue
-	DialogueManager.show_dialogue(d, "start")
+func _start_dialogue() -> void:
+	var d: DialogueResource = load("res://dialogues/jeniffer.dialogue")
+	if d == null:
+		push_error("No se pudo cargar res://dialogues/jeniffer.dialogue")
+		return
 
-	# Conecta señales del Dialogue Manager
-	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
-	DialogueManager.dialogue_started.connect(_on_dialogue_started)
-	DialogueManager.dialogue_line_started.connect(_on_dialogue_line_started)
-	DialogueManager.dialogue_line_finished.connect(_on_dialogue_line_finished)
+	# Lanza el globo empezando en el nodo 'start'
+	var balloon := DialogueManager.show_dialogue_balloon(d, "start")
+	if balloon:
+		if balloon.has_signal("dialogue_finished"):
+			balloon.connect("dialogue_finished", Callable(self, "_on_dialogue_finished"))
+		if balloon.has_signal("line_started"):
+			balloon.connect("line_started", Callable(self, "_on_line_started"))
+		if balloon.has_signal("line_finished"):
+			balloon.connect("line_finished", Callable(self, "_on_line_finished"))
 
-func _on_dialogue_started() -> void:
-	# Aquí podrías ocultar tu PanelContainer viejo, si lo sigues teniendo en escena
-	if has_node("CanvasLayer/PanelContainer"):
-		$CanvasLayer/PanelContainer.visible = false
+func _on_dialogue_finished() -> void:
+	print("Diálogo terminado")
 
-func _on_dialogue_line_started(_line) -> void:
-	# Se dispara cuando se muestra una línea (por si quieres animar al pingüino)
+func _on_line_started(_line) -> void:
+	# Aquí puedes animar a Jeniffer, reproducir un sonido, etc.
+	# if sprite: sprite.play("hablar")
 	pass
 
-func _on_dialogue_line_finished(_line) -> void:
-	# Se dispara cuando termina de imprimirse una línea
+func _on_line_finished(_line) -> void:
+	# if sprite: sprite.play("idle")
 	pass
 
-func _on_dialogue_ended() -> void:
-	# Reactiva el botón y/o pasa a la siguiente escena
-	if is_instance_valid(boton_siguiente):
-		boton_siguiente.disabled = false
-	# Si quieres cambiar automáticamente de escena al terminar:
-	# get_tree().change_scene_to_file("res://Ecenas/acto_2.tscn")
 
-# Si sigues usando el botón "Siguiente" manual:
-func _on_siguiente_pressed() -> void:
-	get_tree().change_scene_to_file("res://Ecenas/acto_2.tscn")
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Ecenas/Menger.tscn")

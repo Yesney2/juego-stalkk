@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://er88p44pso28"
+path="res://.godot/imported/Fondo 1.mp3-a508c3f1f31b2507077fc198505e39b2.mp3str"
+
+[deps]
+
+source_file="res://Audio/Fondo 1.mp3"
+dest_files=["res://.godot/imported/Fondo 1.mp3-a508c3f1f31b2507077fc198505e39b2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

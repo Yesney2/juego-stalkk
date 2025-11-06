@@ -1,10 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbccs3ga6gq4e"]
+[gd_scene load_steps=10 format=3 uid="uid://cbccs3ga6gq4e"]
 
-[ext_resource type="Texture2D" uid="uid://brjty8nmihqey" path="res://Imgenes/Fondos/Captura de pantalla 2025-10-21 105550.png" id="1_2h4yb"]
 [ext_resource type="Script" uid="uid://cj5qvl7rx3lpx" path="res://Scripts/con_jeniffer.gd" id="1_sq7u7"]
-[ext_resource type="Texture2D" uid="uid://b5r3t4b11kv1v" path="res://Imgenes/Fondos/Celular.png" id="2_wko26"]
-[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_2h4yb"]
-[ext_resource type="Texture2D" uid="uid://ntvf8s6wsgoh" path="res://Imgenes/Personajes/3-removebg-preview.png" id="3_qymsr"]
+[ext_resource type="Texture2D" uid="uid://bmgcfqv4b61f6" path="res://Imagenes/Fondos/Gemini_Generated_Image_l0s7h7l0s7h7l0s7.png" id="2_k3hu8"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_2h4yb"]
+[ext_resource type="Texture2D" uid="uid://ddillrf3bje75" path="res://Imagenes/Personajes/Jenojado.png" id="3_8lo31"]
+[ext_resource type="Texture2D" uid="uid://dphfgbrw60c0u" path="res://Imagenes/Personajes/Jfeliz.png" id="4_18gaq"]
+[ext_resource type="Texture2D" uid="uid://bui7cxe6m0w2o" path="res://Imagenes/Personajes/Jnormal.png" id="5_k3hu8"]
+[ext_resource type="Texture2D" uid="uid://csf0iu71408a" path="res://Imagenes/Personajes/Jpensando.png" id="6_o4jk0"]
+[ext_resource type="AudioStream" uid="uid://ciadskipkobh" path="res://Audio/parque-urbano-56427.mp3" id="8_18gaq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_03mqy"]
+animations = [{
+"frames": [{
+"duration": 50.0,
+"texture": ExtResource("4_18gaq")
+}, {
+"duration": 50.0,
+"texture": ExtResource("5_k3hu8")
+}, {
+"duration": 50.0,
+"texture": ExtResource("6_o4jk0")
+}, {
+"duration": 50.0,
+"texture": ExtResource("3_8lo31")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="ConJeniffer" type="Control"]
 layout_mode = 3
@@ -15,59 +38,31 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sq7u7")
 
-[node name="FMorado" type="TextureRect" parent="."]
+[node name="Fparque" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(0.989169, 1.33081)
-texture = ExtResource("1_2h4yb")
+scale = Vector2(1.139, 0.678726)
+texture = ExtResource("2_k3hu8")
 
-[node name="FCelular" type="TextureRect" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(569, 311)
+scale = Vector2(0.8514, 0.873563)
+sprite_frames = SubResource("SpriteFrames_03mqy")
+autoplay = "default"
+frame = 3
+frame_progress = 1.0
+
+[node name="audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_18gaq")
+autoplay = true
+
+[node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.566157, 0.601362)
-texture = ExtResource("2_wko26")
-
-[node name="Header" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 67.0
-offset_top = 56.0
-offset_right = 1098.0
-offset_bottom = 615.0
-scale = Vector2(0.260351, 0.21216)
-theme_override_constants/separation = 100
-
-[node name="BtnBack" type="Button" parent="Header"]
-layout_mode = 2
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.220716, 0.16185)
 icon = ExtResource("3_2h4yb")
 flat = true
 
-[node name="TextureRect" type="TextureRect" parent="Header"]
-modulate = Color(1, 1, 0.839216, 1)
-self_modulate = Color(1, 1, 0.921569, 1)
-layout_mode = 2
-texture = ExtResource("3_qymsr")
-stretch_mode = 4
-
-[node name="ContactName" type="Label" parent="Header"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 140
-text = "Jeniffer"
-
-[node name="ChatArea" type="ScrollContainer" parent="."]
-layout_mode = 0
-offset_left = 89.0
-offset_top = 167.0
-offset_right = 129.0
-offset_bottom = 207.0
-scale = Vector2(23.9524, 9.40415)
-
-[node name="Messages" type="VBoxContainer" parent="ChatArea"]
-layout_mode = 2
-
-[node name="Options" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

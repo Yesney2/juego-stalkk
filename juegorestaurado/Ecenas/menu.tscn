@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cv0b0n522bdx5"]
+[gd_scene load_steps=8 format=3 uid="uid://cv0b0n522bdx5"]
 
 [ext_resource type="Script" uid="uid://bccne8ayf7u7g" path="res://Scripts/menu.gd" id="1_xjki6"]
-[ext_resource type="Texture2D" uid="uid://bpc40hy878nwe" path="res://Imgenes/Fondos/6053836.jpg" id="2_dyfpn"]
-[ext_resource type="Texture2D" uid="uid://bn3b0crve2ra2" path="res://Imgenes/Botones/90Z_2109.w032.n003.95B.p1.95-removebg-preview.png" id="3_76hkc"]
+[ext_resource type="Texture2D" uid="uid://bpc40hy878nwe" path="res://Imagenes/Fondos/6053836.jpg" id="2_dyfpn"]
+[ext_resource type="Texture2D" uid="uid://bn3b0crve2ra2" path="res://Imagenes/Botones/90Z_2109.w032.n003.95B.p1.95-removebg-preview.png" id="3_76hkc"]
 [ext_resource type="AudioStream" uid="uid://dsf503qfnytkk" path="res://Audio/gotabutton.wav" id="4_dyfpn"]
-[ext_resource type="Texture2D" uid="uid://e5jx7t641kfr" path="res://Imgenes/Botones/opcciones-removebg-preview.png" id="4_rby0t"]
-[ext_resource type="Texture2D" uid="uid://3dwm0pfu5svq" path="res://Imgenes/Botones/salir-removebg-preview.png" id="5_alsua"]
+[ext_resource type="Texture2D" uid="uid://e5jx7t641kfr" path="res://Imagenes/Botones/opcciones-removebg-preview.png" id="4_rby0t"]
+[ext_resource type="Texture2D" uid="uid://3dwm0pfu5svq" path="res://Imagenes/Botones/salir-removebg-preview.png" id="5_alsua"]
+[ext_resource type="AudioStream" uid="uid://er88p44pso28" path="res://Audio/Fondo 1.mp3" id="7_76hkc"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -22,7 +23,7 @@ offset_left = 2.0
 offset_top = 1.0
 offset_right = 42.0
 offset_bottom = 41.0
-scale = Vector2(0.386364, 0.329545)
+scale = Vector2(0.482289, 0.43554)
 texture = ExtResource("2_dyfpn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -63,6 +64,10 @@ flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Salir"]
 stream = ExtResource("4_dyfpn")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_76hkc")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Bjugar" to="." method="_on_bjugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/Bopcciones" to="." method="_on_bopcciones_pressed"]

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cl481r2y5jqni"]
 
-[ext_resource type="Texture2D" uid="uid://dvjlga4b5fcx8" path="res://Imgenes/Fondos/9b9b9b.png" id="1_cbijm"]
+[ext_resource type="Texture2D" uid="uid://dvjlga4b5fcx8" path="res://Imagenes/Fondos/9b9b9b.png" id="1_cbijm"]
 [ext_resource type="Script" uid="uid://bmrc2mc7yesie" path="res://Scripts/info_jeniffer.gd" id="1_qqk6d"]
-[ext_resource type="Texture2D" uid="uid://cxm5c60nm0rtc" path="res://Imgenes/Personajes/2.png" id="2_cbijm"]
-[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_cq3jv"]
-[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imgenes/Botones/globos-de-texto.png" id="5_kxb50"]
+[ext_resource type="Texture2D" uid="uid://cxm5c60nm0rtc" path="res://Imagenes/Personajes/2.png" id="2_cbijm"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_cq3jv"]
+[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imagenes/Botones/globos-de-texto.png" id="5_kxb50"]
 
 [node name="Info_Jeniffer" type="Node2D"]
 script = ExtResource("1_qqk6d")
@@ -17,11 +17,11 @@ offset_bottom = 40.0
 scale = Vector2(28.8881, 17.8337)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = 253.0
-offset_top = -2.0
-offset_right = 1413.0
-offset_bottom = 1158.0
-scale = Vector2(0.569048, 0.524096)
+offset_left = -22.0
+offset_top = -6.0
+offset_right = 1138.0
+offset_bottom = 1154.0
+scale = Vector2(1.15702, 0.651811)
 texture = ExtResource("1_cbijm")
 
 [node name="FJeniffer" type="TextureRect" parent="CanvasLayer"]
@@ -77,6 +77,9 @@ offset_bottom = 1013.0
 scale = Vector2(0.194094, 0.1917)
 icon = ExtResource("5_kxb50")
 flat = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(664, 354)
 
 [connection signal="pressed" from="CanvasLayer/Bregresar" to="." method="_on_bregresar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menger" to="." method="_on_menger_pressed"]

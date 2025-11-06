@@ -1,8 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2nsbiou5p23"]
+[gd_scene load_steps=10 format=3 uid="uid://d2nsbiou5p23"]
 
 [ext_resource type="Script" uid="uid://do6kx1vrruesr" path="res://Scripts/con_fernando.gd" id="1_un8kp"]
-[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_vp66t"]
-[ext_resource type="Texture2D" uid="uid://b6801qrql20ie" path="res://Imgenes/Personajes/2-removebg-preview.png" id="4_775j8"]
+[ext_resource type="Texture2D" uid="uid://ckseyt1djbouu" path="res://Imagenes/Fondos/Gemini_Generated_Image_9q4rbv9q4rbv9q4r.png" id="2_775j8"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_vp66t"]
+[ext_resource type="Texture2D" uid="uid://cln3lviqq3i76" path="res://Imagenes/Personajes/Fnormal.png" id="4_uo532"]
+[ext_resource type="Texture2D" uid="uid://bywnahsvy7yy0" path="res://Imagenes/Personajes/Fenojad.png" id="5_sd6lr"]
+[ext_resource type="Texture2D" uid="uid://emxbdiysn4pp" path="res://Imagenes/Personajes/Ffeli.png" id="6_eynpd"]
+[ext_resource type="Texture2D" uid="uid://bp10vh5l6gcss" path="res://Imagenes/Personajes/Fpensando.png" id="7_wlaga"]
+[ext_resource type="AudioStream" uid="uid://bfpovjn84bdnu" path="res://Audio/hard-rock-logo-108960.mp3" id="8_uo532"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_twqoo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_uo532")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sd6lr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_eynpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wlaga")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="ConFeranando" type="Control"]
 layout_mode = 3
@@ -13,22 +38,32 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_un8kp")
 
-[node name="Button2" type="Button" parent="."]
+[node name="fgym" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 493.0
-offset_top = 67.0
-offset_right = 948.0
-offset_bottom = 634.0
-scale = Vector2(0.402369, 0.343334)
-icon = ExtResource("4_775j8")
-flat = true
+offset_right = 1024.0
+offset_bottom = 1024.0
+rotation = 0.000711513
+scale = Vector2(1.25952, 0.705249)
+texture = ExtResource("2_775j8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(615, 321)
+scale = Vector2(0.938089, 0.92335)
+sprite_frames = SubResource("SpriteFrames_twqoo")
 
 [node name="Bregresar" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-scale = Vector2(0.188341, 0.163121)
+offset_right = 508.0
+offset_bottom = 508.0
+scale = Vector2(0.197515, 0.196255)
 icon = ExtResource("3_vp66t")
 flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_uo532")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(641, 360)
 
 [connection signal="pressed" from="Bregresar" to="." method="_on_bregresar_pressed"]

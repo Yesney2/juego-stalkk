@@ -1,11 +1,44 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbl3yt6xq44yi"]
+[gd_scene load_steps=13 format=3 uid="uid://dbl3yt6xq44yi"]
 
 [ext_resource type="Script" uid="uid://daplq3l7hbp30" path="res://Scripts/acto_1.gd" id="1_id2ws"]
-[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imgenes/Fondos/5.png" id="1_npgcn"]
-[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imgenes/Personajes/AgenteP.png" id="2_fsw3c"]
+[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imagenes/Fondos/5.png" id="1_npgcn"]
 [ext_resource type="FontFile" uid="uid://tlw1bkkq3ign" path="res://Letras/MiFuente.ttf" id="3_hnntw"]
-[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imgenes/Fondos/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="4_id2ws"]
-[ext_resource type="Texture2D" uid="uid://hgm0jjflkm8t" path="res://Imgenes/Botones/Bcontinuar.png" id="7_31ssc"]
+[ext_resource type="Texture2D" uid="uid://dqnq8avvoyhxn" path="res://Imagenes/Personajes/Psaludo.png" id="4_31ssc"]
+[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imagenes/Fondos/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="4_id2ws"]
+[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imagenes/Personajes/Pagente.png" id="5_oswgf"]
+[ext_resource type="Texture2D" uid="uid://bc80pgcjdtwnw" path="res://Imagenes/Personajes/Ppensando.png" id="6_oswgf"]
+[ext_resource type="Texture2D" uid="uid://nn1pvhft7tfh" path="res://Imagenes/Personajes/Pseñalando.png" id="7_8k1yp"]
+[ext_resource type="Texture2D" uid="uid://hgm0jjflkm8t" path="res://Imagenes/Botones/Bcontinuar.png" id="7_31ssc"]
+[ext_resource type="AudioStream" uid="uid://dsmqd65q0cuxf" path="res://Audio/cyber-intro-67208.mp3" id="8_1yu0i"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="10_7fqsx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oswgf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_31ssc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8k1yp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oswgf")
+}],
+"loop": true,
+"name": &"Saludo",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_oswgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8k1yp")
+}],
+"loop": true,
+"name": &"pensando",
+"speed": 5.0
+}]
 
 [node name="Acto1" type="Node2D"]
 script = ExtResource("1_id2ws")
@@ -15,7 +48,7 @@ offset_left = -1.0
 offset_top = -1.0
 offset_right = 1919.0
 offset_bottom = 1079.0
-scale = Vector2(0.622087, 0.64354)
+scale = Vector2(0.784708, 0.754965)
 texture = ExtResource("1_npgcn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -31,25 +64,46 @@ scale = Vector2(0.885246, 0.970105)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_hnntw")
 
-[node name="Piguino" type="Sprite2D" parent="."]
-position = Vector2(145, 224)
-scale = Vector2(0.554, 0.626)
-texture = ExtResource("2_fsw3c")
+[node name="Pinguino" type="AnimatedSprite2D" parent="."]
+position = Vector2(180, 220)
+sprite_frames = SubResource("SpriteFrames_oswgf")
+animation = &"Saludo"
+frame = 1
+
+[node name="SonidoDialogo" type="AudioStreamPlayer2D" parent="Pinguino"]
+process_mode = 1
+stream = ExtResource("8_1yu0i")
+volume_db = 24.0
+autoplay = true
+max_distance = 1273.0
+attenuation = 0.233258
+max_polyphony = 3
+playback_type = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 4.0
 offset_top = 370.0
 offset_right = 3789.0
 offset_bottom = 2893.0
-scale = Vector2(0.30144, 0.110599)
+scale = Vector2(0.342834, 0.158788)
 texture = ExtResource("4_id2ws")
 
 [node name="Siguiente" type="Button" parent="."]
-offset_left = 1058.0
+offset_left = 1171.0
 offset_top = 377.0
-offset_right = 1525.0
+offset_right = 1638.0
 offset_bottom = 853.0
-scale = Vector2(0.161607, 0.133507)
+scale = Vector2(0.214637, 0.15125)
 icon = ExtResource("7_31ssc")
 
+[node name="SonFon" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.151207, 0.14063)
+icon = ExtResource("10_7fqsx")
+flat = true
+
 [connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

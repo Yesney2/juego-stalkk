@@ -1,7 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1peilx4t8fg0"]
+[gd_scene load_steps=10 format=3 uid="uid://d1peilx4t8fg0"]
 
-[ext_resource type="Texture2D" uid="uid://8v8kf76yn7g1" path="res://Imgenes/Personajes/1-removebg-preview.png" id="2_7ausx"]
-[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imgenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_07xwa"]
+[ext_resource type="Script" uid="uid://dt5gpvdl8pnuc" path="res://Scripts/con_scarllet.gd" id="1_0kf46"]
+[ext_resource type="Texture2D" uid="uid://c6w6wmbcpy76e" path="res://Imagenes/Fondos/ChatGPT Image 2 nov 2025, 07_44_57 p.m..png" id="1_v3dwr"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_07xwa"]
+[ext_resource type="Texture2D" uid="uid://pb72g58rs3w8" path="res://Imagenes/Personajes/Senojada.png" id="3_l2i1d"]
+[ext_resource type="Texture2D" uid="uid://xtno8vk2ifax" path="res://Imagenes/Personajes/Sfeliz.png" id="4_0kf46"]
+[ext_resource type="Texture2D" uid="uid://dwuhme06jgrxk" path="res://Imagenes/Personajes/Snormal.png" id="5_r8j2v"]
+[ext_resource type="Texture2D" uid="uid://c28f80vechxkt" path="res://Imagenes/Personajes/Spensando.png" id="6_rym86"]
+[ext_resource type="AudioStream" uid="uid://dvc2r301ed6od" path="res://Audio/elegante.mp3" id="8_0kf46"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ampng"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_l2i1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0kf46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r8j2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rym86")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="ConScarllet" type="Control"]
 layout_mode = 3
@@ -10,25 +36,34 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0kf46")
 
-[node name="Button" type="Button" parent="."]
+[node name="Fbar" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 526.0
-offset_top = 74.0
-offset_right = 981.0
-offset_bottom = 641.0
-scale = Vector2(0.259577, 0.208128)
-icon = ExtResource("2_7ausx")
-flat = true
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.2816, 0.703985)
+texture = ExtResource("1_v3dwr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(642, 357)
+scale = Vector2(-1.27502, -1.06067)
 
 [node name="Bregresar" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-scale = Vector2(0.114248, 0.119239)
+offset_right = 508.0
+offset_bottom = 508.0
+scale = Vector2(0.152331, 0.129949)
 icon = ExtResource("3_07xwa")
 flat = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(580, 329)
-scale = Vector2(-1.3698, -1.1168)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(669, 335)
+scale = Vector2(0.871429, 0.827498)
+sprite_frames = SubResource("SpriteFrames_ampng")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_0kf46")
+autoplay = true
+
+[connection signal="pressed" from="Bregresar" to="." method="_on_bregresar_pressed"]
