@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3ocp4g2106a0"]
+
+[ext_resource type="Texture2D" uid="uid://chhd0pn1ndj5h" path="res://Imagenes/Fondos/perdiste.png" id="1_2nwin"]
+[ext_resource type="Script" uid="uid://bbfc8x8ia3aw3" path="res://Scripts/reportar_incorrecto.gd" id="1_rrhji"]
+[ext_resource type="AudioStream" uid="uid://ddgfxhyelb207" path="res://Audio/evil-laugh-89423.mp3" id="3_er35t"]
+[ext_resource type="Texture2D" uid="uid://bwr3ud22qafr" path="res://Imagenes/Botones/Menu.png" id="4_g5bws"]
+
+[node name="reportar_incorrecto" type="Node2D"]
+script = ExtResource("1_rrhji")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -148.0
+offset_top = -57.0
+offset_right = 876.0
+offset_bottom = 967.0
+scale = Vector2(1.52451, 0.94991)
+texture = ExtResource("1_2nwin")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_er35t")
+autoplay = true
+
+[node name="home" type="Button" parent="."]
+offset_left = 1091.0
+offset_top = 4.0
+offset_right = 1821.0
+offset_bottom = 512.0
+scale = Vector2(0.254126, 0.248556)
+icon = ExtResource("4_g5bws")
+flat = true

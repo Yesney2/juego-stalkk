@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://biqmh4ohrfde5"
+path="res://.godot/imported/Acto1_parte2_menger.dialogue-ae1185edaf9c8817dfacbd4d7b0a3c07.tres"
+
+[deps]
+
+source_file="res://dialogues/Acto1_parte2_menger.dialogue"
+dest_files=["res://.godot/imported/Acto1_parte2_menger.dialogue-ae1185edaf9c8817dfacbd4d7b0a3c07.tres"]
+
+[params]
+
+defaults=true

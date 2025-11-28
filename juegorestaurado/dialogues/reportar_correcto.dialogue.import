@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bh6ibbhv6ny7m"
+path="res://.godot/imported/reportar_correcto.dialogue-3492b4074a35c50b1962e0f468087f2d.tres"
+
+[deps]
+
+source_file="res://dialogues/reportar_correcto.dialogue"
+dest_files=["res://.godot/imported/reportar_correcto.dialogue-3492b4074a35c50b1962e0f468087f2d.tres"]
+
+[params]
+
+defaults=true

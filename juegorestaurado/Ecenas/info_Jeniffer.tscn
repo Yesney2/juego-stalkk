@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cl481r2y5jqni"]
+[gd_scene load_steps=7 format=3 uid="uid://cl481r2y5jqni"]
 
 [ext_resource type="Texture2D" uid="uid://dvjlga4b5fcx8" path="res://Imagenes/Fondos/9b9b9b.png" id="1_cbijm"]
 [ext_resource type="Script" uid="uid://bmrc2mc7yesie" path="res://Scripts/info_jeniffer.gd" id="1_qqk6d"]
 [ext_resource type="Texture2D" uid="uid://cxm5c60nm0rtc" path="res://Imagenes/Personajes/2.png" id="2_cbijm"]
 [ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_cq3jv"]
 [ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imagenes/Botones/globos-de-texto.png" id="5_kxb50"]
+[ext_resource type="AudioStream" uid="uid://b3krhur2og46u" path="res://Audio/AudioCutter_Spy3 Gunn .wav" id="6_kxb50"]
 
 [node name="Info_Jeniffer" type="Node2D"]
 script = ExtResource("1_qqk6d")
@@ -17,11 +18,11 @@ offset_bottom = 40.0
 scale = Vector2(28.8881, 17.8337)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = -22.0
-offset_top = -6.0
-offset_right = 1138.0
-offset_bottom = 1154.0
-scale = Vector2(1.15702, 0.651811)
+offset_left = -164.0
+offset_top = -119.0
+offset_right = 996.0
+offset_bottom = 1041.0
+scale = Vector2(1.9995, 1.14509)
 texture = ExtResource("1_cbijm")
 
 [node name="FJeniffer" type="TextureRect" parent="CanvasLayer"]
@@ -29,7 +30,7 @@ offset_left = 291.0
 offset_top = 31.0
 offset_right = 1162.0
 offset_bottom = 896.0
-scale = Vector2(0.300702, 0.276897)
+scale = Vector2(0.335489, 0.314799)
 texture = ExtResource("2_cbijm")
 
 [node name="Datosparte1" type="RichTextLabel" parent="CanvasLayer"]
@@ -37,7 +38,7 @@ offset_left = 313.0
 offset_top = 312.0
 offset_right = 763.0
 offset_bottom = 490.0
-scale = Vector2(1.13308, 0.982192)
+scale = Vector2(1.602, 1.28427)
 text = "Hobbit:
 Le gusta ver foros de internet, navega por la darkweb.
 
@@ -49,6 +50,7 @@ offset_left = 597.0
 offset_top = 25.0
 offset_right = 857.0
 offset_bottom = 300.0
+scale = Vector2(1.62413, 0.835181)
 bbcode_enabled = true
 text = "Nombre: Jeniffer Ramírez
 
@@ -61,25 +63,29 @@ Nacimiento: 20 de septiembre de 2010.
 Ocupación: Estudiante de secundaria."
 
 [node name="Bregresar" type="Button" parent="CanvasLayer"]
-offset_left = 355.0
-offset_top = 505.0
-offset_right = 863.0
-offset_bottom = 1013.0
-scale = Vector2(0.185962, 0.140468)
+offset_left = 330.0
+offset_top = 617.0
+offset_right = 838.0
+offset_bottom = 1125.0
+scale = Vector2(0.240346, 0.209608)
 icon = ExtResource("3_cq3jv")
 flat = true
 
 [node name="Menger" type="Button" parent="CanvasLayer"]
-offset_left = 665.0
-offset_top = 493.0
-offset_right = 1185.0
-offset_bottom = 1013.0
-scale = Vector2(0.194094, 0.1917)
+offset_left = 649.0
+offset_top = 614.0
+offset_right = 1169.0
+offset_bottom = 1134.0
+scale = Vector2(0.238307, 0.230214)
 icon = ExtResource("5_kxb50")
 flat = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(664, 354)
+position = Vector2(632, 359)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_kxb50")
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/Bregresar" to="." method="_on_bregresar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menger" to="." method="_on_menger_pressed"]

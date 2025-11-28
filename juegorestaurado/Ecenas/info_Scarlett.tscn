@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://silg88c5lvvd"]
+[gd_scene load_steps=7 format=3 uid="uid://silg88c5lvvd"]
 
 [ext_resource type="Texture2D" uid="uid://dvjlga4b5fcx8" path="res://Imagenes/Fondos/9b9b9b.png" id="1_3m571"]
 [ext_resource type="Script" uid="uid://cygbm83a2h43e" path="res://Scripts/info_scarlett.gd" id="1_i3svn"]
 [ext_resource type="Texture2D" uid="uid://cdhhpkmyo7pf5" path="res://Imagenes/Personajes/1.png" id="2_3m571"]
 [ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="3_6slfk"]
 [ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imagenes/Botones/globos-de-texto.png" id="5_8i2ep"]
+[ext_resource type="AudioStream" uid="uid://b3krhur2og46u" path="res://Audio/AudioCutter_Spy3 Gunn .wav" id="6_8i2ep"]
 
-[node name="Info_Fernando" type="Node2D"]
+[node name="Info_Scarlett" type="Node2D"]
 script = ExtResource("1_i3svn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -17,27 +18,27 @@ offset_bottom = 40.0
 scale = Vector2(28.8881, 17.8337)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = -3.05176e-05
-offset_top = 6.0
-offset_right = 1160.0
-offset_bottom = 1166.0
-scale = Vector2(1.11062, 0.63748)
+offset_left = -411.0
+offset_top = -173.0
+offset_right = 1403.0
+offset_bottom = 1604.0
+scale = Vector2(1.52847, 1.29041)
 texture = ExtResource("1_3m571")
 
 [node name="FScarlett" type="TextureRect" parent="CanvasLayer"]
-offset_left = 291.0
-offset_top = 31.0
-offset_right = 1162.0
-offset_bottom = 896.0
-scale = Vector2(0.300702, 0.276897)
+offset_left = 367.0
+offset_top = 37.0
+offset_right = 1238.0
+offset_bottom = 945.0
+scale = Vector2(0.364796, 0.334655)
 texture = ExtResource("2_3m571")
 
 [node name="Datosparte1" type="RichTextLabel" parent="CanvasLayer"]
-offset_left = 309.0
-offset_top = 333.0
-offset_right = 759.0
-offset_bottom = 511.0
-scale = Vector2(1.13308, 0.982192)
+offset_left = 377.0
+offset_top = 355.0
+offset_right = 827.0
+offset_bottom = 533.0
+scale = Vector2(1.82046, 1.42807)
 text = "Hobbits: Fotografía urbana, pintura digital y coleccionar vinilos.
 
  Sospechosa: 
@@ -45,10 +46,11 @@ Su portafolio en línea muestra trabajos que, al verificar, parecen extraídos d
 visible_characters_behavior = 1
 
 [node name="Datosparte2" type="RichTextLabel" parent="CanvasLayer"]
-offset_left = 599.0
-offset_top = 35.0
-offset_right = 859.0
-offset_bottom = 310.0
+offset_left = 729.0
+offset_top = 33.0
+offset_right = 989.0
+offset_bottom = 308.0
+scale = Vector2(1.76216, 1.05827)
 bbcode_enabled = true
 text = "Nombre: Scarlett Álvarez
 
@@ -61,25 +63,30 @@ Nacimiento: 12 de junio de 2000.
 Ocupación: Diseñadora gráfica freelance."
 
 [node name="Bregresar" type="Button" parent="CanvasLayer"]
-offset_left = 369.0
-offset_top = 529.0
-offset_right = 877.0
-offset_bottom = 1037.0
-scale = Vector2(0.205697, 0.166144)
+offset_left = 445.0
+offset_top = 617.0
+offset_right = 953.0
+offset_bottom = 1125.0
+scale = Vector2(0.268066, 0.195794)
 icon = ExtResource("3_6slfk")
 flat = true
 
 [node name="Menger" type="Button" parent="CanvasLayer"]
-offset_left = 650.0
-offset_top = 516.0
-offset_right = 1170.0
-offset_bottom = 1036.0
-scale = Vector2(0.225297, 0.213565)
+offset_left = 758.0
+offset_top = 615.0
+offset_right = 1278.0
+offset_bottom = 1135.0
+scale = Vector2(0.241194, 0.224969)
 icon = ExtResource("5_8i2ep")
 flat = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(643, 361)
+scale = Vector2(1.02903, 1.16695)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_8i2ep")
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/Bregresar" to="." method="_on_bregresar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menger" to="." method="_on_menger_pressed"]

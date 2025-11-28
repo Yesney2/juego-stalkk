@@ -1,0 +1,147 @@
+[gd_scene load_steps=14 format=3 uid="uid://tpg5853mejfs"]
+
+[ext_resource type="Script" uid="uid://cbmbjh1ldr7p5" path="res://Scripts/acto_2_parte_1_2.gd" id="1_y0qfk"]
+[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imagenes/Fondos/5.png" id="2_lt0uu"]
+[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imagenes/Fondos/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="3_c32r7"]
+[ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imagenes/Fondos/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="4_pdrg6"]
+[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imagenes/Personajes/Pagente.png" id="5_i1qaq"]
+[ext_resource type="Texture2D" uid="uid://cdhhpkmyo7pf5" path="res://Imagenes/Personajes/1.png" id="6_uc2hr"]
+[ext_resource type="Texture2D" uid="uid://cxm5c60nm0rtc" path="res://Imagenes/Personajes/2.png" id="7_tr8ai"]
+[ext_resource type="Texture2D" uid="uid://dqpyvp1bd3nh2" path="res://Imagenes/Personajes/3.png" id="8_fs8w7"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="9_cnne3"]
+[ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imagenes/Botones/boton-de-emergencia.png" id="10_x0xrr"]
+[ext_resource type="AudioStream" uid="uid://dp3kq8t2tsbv3" path="res://Audio/mist.wav" id="11_npotn"]
+[ext_resource type="Texture2D" uid="uid://hgm0jjflkm8t" path="res://Imagenes/Botones/Bcontinuar.png" id="12_mpjq3"]
+[ext_resource type="Texture2D" uid="uid://bwr3ud22qafr" path="res://Imagenes/Botones/Menu.png" id="13_l75kh"]
+
+[node name="acto_2_parte1_2" type="Node2D"]
+script = ExtResource("1_y0qfk")
+
+[node name="Fgris" type="TextureRect" parent="."]
+offset_left = -311.0
+offset_top = -116.0
+offset_right = 1609.0
+offset_bottom = 964.0
+scale = Vector2(1.17506, 1.24727)
+texture = ExtResource("2_lt0uu")
+
+[node name="Fazul" type="TextureRect" parent="."]
+offset_left = -320.0
+offset_top = 274.0
+offset_right = 3465.0
+offset_bottom = 2797.0
+scale = Vector2(0.606204, 0.0922702)
+texture = ExtResource("3_c32r7")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = -310.0
+offset_top = 854.0
+offset_right = 6314.0
+offset_bottom = 5270.0
+scale = Vector2(0.403072, -0.11295)
+texture = ExtResource("4_pdrg6")
+
+[node name="Gcperfiles" type="GridContainer" parent="."]
+offset_left = 148.0
+offset_top = 38.0
+offset_right = 3042.0
+offset_bottom = 1118.0
+scale = Vector2(0.353446, 0.357308)
+theme_override_constants/h_separation = 136
+theme_override_constants/v_separation = 27
+columns = 3
+
+[node name="BScarlett" type="Button" parent="Gcperfiles"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+icon = ExtResource("6_uc2hr")
+flat = true
+
+[node name="BJeniffer" type="Button" parent="Gcperfiles"]
+layout_mode = 2
+icon = ExtResource("7_tr8ai")
+
+[node name="BFernando" type="Button" parent="Gcperfiles"]
+layout_mode = 2
+icon = ExtResource("8_fs8w7")
+flat = true
+
+[node name="LScarlett" type="Label" parent="Gcperfiles"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Scarlett"
+horizontal_alignment = 1
+
+[node name="LJeniffer" type="Label" parent="Gcperfiles"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Jeniffer"
+horizontal_alignment = 1
+
+[node name="LFeranando" type="Label" parent="Gcperfiles"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Fernando"
+horizontal_alignment = 1
+
+[node name="Pinguino" type="Sprite2D" parent="."]
+position = Vector2(131, 253)
+scale = Vector2(0.534091, 0.45)
+texture = ExtResource("5_i1qaq")
+
+[node name="Bregresar" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.168993, 0.158602)
+icon = ExtResource("9_cnne3")
+flat = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(642, 364)
+
+[node name="Iniciar" type="Button" parent="."]
+offset_left = 494.0
+offset_top = 437.0
+offset_right = 1002.0
+offset_bottom = 945.0
+scale = Vector2(0.60366, 0.422867)
+icon = ExtResource("10_x0xrr")
+flat = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 569.0
+offset_top = 662.0
+offset_right = 734.0
+offset_bottom = 713.0
+theme_override_font_sizes/font_size = 37
+text = "REPORTA"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_npotn")
+autoplay = true
+
+[node name="Siguiente" type="Button" parent="."]
+offset_left = 1150.0
+offset_top = 363.0
+offset_right = 1617.0
+offset_bottom = 839.0
+scale = Vector2(0.253451, 0.195213)
+icon = ExtResource("12_mpjq3")
+flat = true
+
+[node name="menu" type="Button" parent="."]
+offset_left = 1143.0
+offset_top = 2.0
+offset_right = 1651.0
+offset_bottom = 510.0
+scale = Vector2(0.27993, 0.249994)
+icon = ExtResource("13_l75kh")
+flat = true
+
+[connection signal="pressed" from="Gcperfiles/BScarlett" to="." method="_on_bscarlett_pressed"]
+[connection signal="pressed" from="Gcperfiles/BJeniffer" to="." method="_on_bjeniffer_pressed"]
+[connection signal="pressed" from="Gcperfiles/BFernando" to="." method="_on_bfernando_pressed"]
+[connection signal="pressed" from="Bregresar" to="." method="_on_bregresar_pressed"]
+[connection signal="pressed" from="Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

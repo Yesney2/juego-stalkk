@@ -8,10 +8,18 @@ extends Node2D
 var balloon  # nodo del diálogo
 
 func _ready() -> void:
+	# Cargar progreso
+	GameData.cargar()
+
+	# Guardar que estamos en acto_1 (por si el jugador se queda aquí)
+	GameData.ultima_escena = "res://Ecenas/acto_1.tscn"
+	GameData.guardar()
+
+	# Ocultar panel de diálogo si existe
 	if panel_dialogo:
 		panel_dialogo.visible = false
 
-	# Inicia con el primer frame sin reproducir animación automáticamente
+	# Iniciar animación del pingüino
 	pinguino.animation = "Saludo"
 	pinguino.frame = 0
 	pinguino.stop()
@@ -20,7 +28,7 @@ func _ready() -> void:
 	var recurso_dialogo: DialogueResource = load("res://dialogues/AgenteP.dialogue")
 	balloon = DialogueManager.show_dialogue_balloon(recurso_dialogo, "start")
 
-	# Conectar señales si el balloon se generó correctamente
+	# Conectar señales del diálogo
 	if balloon:
 		if balloon.has_signal("dialogue_finished"):
 			balloon.dialogue_finished.connect(_on_dialogue_finished)
@@ -33,7 +41,7 @@ func _ready() -> void:
 
 
 func _on_line_started(_line) -> void:
-	# Reproduce sonido si el nodo existe y es válido
+	# Reproduce sonido si el nodo existe
 	if sonido_dialogo:
 		if sonido_dialogo.is_playing():
 			sonido_dialogo.stop()
@@ -53,8 +61,22 @@ func _on_line_skipped(_line) -> void:
 
 
 func _on_dialogue_finished() -> void:
-	boton_siguiente.visible = true
+	# Marcar que ya vimos la intro al terminar este diálogo
+	GameData.intro_vista = true
+	GameData.ultima_escena = "res://Ecenas/acto_1.tscn"
+	GameData.guardar()
+	# Aquí puedes habilitar botones, etc., si hace falta
 
 
 func _on_siguiente_pressed() -> void:
+	# Pasar a la siguiente escena de instrucciones
 	get_tree().change_scene_to_file("res://Ecenas/acto_2.tscn")
+
+
+func _on_regresar_pressed() -> void:
+	# Volver al menú
+	get_tree().change_scene_to_file("res://Ecenas/menu.tscn")
+
+
+func _on_menu_pressed() -> void:
+	get_tree().change_scene_to_file("res://Ecenas/menu.tscn")

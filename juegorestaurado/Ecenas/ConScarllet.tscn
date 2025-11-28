@@ -12,17 +12,17 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_ampng"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_l2i1d")
-}, {
-"duration": 1.0,
+"duration": 50.0,
 "texture": ExtResource("4_0kf46")
 }, {
-"duration": 1.0,
+"duration": 50.0,
 "texture": ExtResource("5_r8j2v")
 }, {
-"duration": 1.0,
+"duration": 50.0,
 "texture": ExtResource("6_rym86")
+}, {
+"duration": 50.0,
+"texture": ExtResource("3_l2i1d")
 }],
 "loop": true,
 "name": &"default",
@@ -40,9 +40,11 @@ script = ExtResource("1_0kf46")
 
 [node name="Fbar" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(1.2816, 0.703985)
+offset_left = -143.0
+offset_top = -3.0
+offset_right = 1020.0
+offset_bottom = 1267.0
+scale = Vector2(2.0879, 0.73738)
 texture = ExtResource("1_v3dwr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -58,9 +60,10 @@ icon = ExtResource("3_07xwa")
 flat = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(669, 335)
-scale = Vector2(0.871429, 0.827498)
+position = Vector2(580, 335)
+scale = Vector2(1.18348, 0.90453)
 sprite_frames = SubResource("SpriteFrames_ampng")
+autoplay = "default"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_0kf46")

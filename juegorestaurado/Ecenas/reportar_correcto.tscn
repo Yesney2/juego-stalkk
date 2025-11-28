@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://kb4jrp8qxdkc"]
+
+[ext_resource type="Texture2D" uid="uid://b2c3cvxrvi1pb" path="res://Imagenes/Fondos/ganaste.png" id="1_jl8nh"]
+[ext_resource type="Script" uid="uid://bwowahojvq3vr" path="res://Scripts/reportar_correcto.gd" id="1_x2evv"]
+[ext_resource type="AudioStream" uid="uid://ch80oejhi86yf" path="res://Audio/digital-sequence-339981.mp3" id="3_66c3k"]
+[ext_resource type="Texture2D" uid="uid://bwr3ud22qafr" path="res://Imagenes/Botones/Menu.png" id="3_aucrc"]
+
+[node name="reportar_correcto" type="Node2D"]
+script = ExtResource("1_x2evv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -167.0
+offset_top = -172.0
+offset_right = 985.0
+offset_bottom = 724.0
+scale = Vector2(1.42352, 1.01334)
+texture = ExtResource("1_jl8nh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_66c3k")
+autoplay = true
+
+[node name="home" type="Button" parent="."]
+offset_left = 1078.0
+offset_top = 2.0
+offset_right = 1586.0
+offset_bottom = 510.0
+scale = Vector2(0.258744, 0.210337)
+icon = ExtResource("3_aucrc")
+flat = true
+
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]

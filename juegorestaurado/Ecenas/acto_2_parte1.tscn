@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=3 uid="uid://clif8e700mht4"]
+
+[ext_resource type="Script" uid="uid://ct5pr410or7pp" path="res://Scripts/acto_2_parte_1.gd" id="1_1hc6d"]
+[ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imagenes/Fondos/5.png" id="2_hsp26"]
+[ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imagenes/Fondos/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="3_t6sok"]
+[ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imagenes/Fondos/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="4_5m2kv"]
+[ext_resource type="AudioStream" uid="uid://b8h01o8i6sa1w" path="res://Audio/Codigomorse.wav" id="5_elusg"]
+[ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imagenes/Personajes/Pagente.png" id="6_l7g7m"]
+[ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imagenes/Botones/boton-de-emergencia.png" id="7_lvw7b"]
+[ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="11_2rurc"]
+[ext_resource type="Texture2D" uid="uid://hgm0jjflkm8t" path="res://Imagenes/Botones/Bcontinuar.png" id="12_6ad5h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1d7yi"]
+animations = [{
+"frames": [{
+"duration": 20.0,
+"texture": ExtResource("6_l7g7m")
+}],
+"loop": true,
+"name": &"Botones",
+"speed": 5.0
+}]
+
+[node name="acto_2_parte1" type="Node2D"]
+script = ExtResource("1_1hc6d")
+
+[node name="Fgris" type="TextureRect" parent="."]
+offset_left = -427.0
+offset_top = -282.0
+offset_right = 1493.0
+offset_bottom = 798.0
+scale = Vector2(1.36945, 1.71834)
+texture = ExtResource("2_hsp26")
+
+[node name="Fazul" type="TextureRect" parent="."]
+offset_left = -444.0
+offset_top = 259.0
+offset_right = 3341.0
+offset_bottom = 12891.0
+scale = Vector2(0.698146, 0.0397042)
+texture = ExtResource("3_t6sok")
+
+[node name="FNegro" type="TextureRect" parent="."]
+offset_left = -359.0
+offset_top = 2.0
+offset_right = 6265.0
+offset_bottom = 4675.0
+scale = Vector2(0.343618, 0.0834391)
+texture = ExtResource("4_5m2kv")
+
+[node name="SonidoDialogo" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(226, 371)
+scale = Vector2(1.32595, 0.476887)
+stream = ExtResource("5_elusg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(183, 245)
+scale = Vector2(0.699938, 0.582512)
+sprite_frames = SubResource("SpriteFrames_1d7yi")
+animation = &"Botones"
+autoplay = "Botones"
+frame_progress = 0.488442
+
+[node name="TypingTimer" type="Timer" parent="."]
+
+[node name="Bregresar" type="Button" parent="."]
+offset_right = 508.0
+offset_bottom = 508.0
+scale = Vector2(0.156224, 0.135094)
+icon = ExtResource("11_2rurc")
+flat = true
+
+[node name="Siguiente" type="Button" parent="."]
+offset_left = 1052.0
+offset_top = 358.0
+offset_right = 1519.0
+offset_bottom = 834.0
+scale = Vector2(0.250248, 0.171613)
+icon = ExtResource("12_6ad5h")
+flat = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(639, 357)
+scale = Vector2(3.70143, 3.49818)
+
+[node name="Reportar" type="Button" parent="."]
+offset_left = 543.0
+offset_top = 145.0
+offset_right = 1063.0
+offset_bottom = 665.0
+scale = Vector2(0.371349, 0.314217)
+icon = ExtResource("7_lvw7b")
+
+[node name="text" type="Label" parent="."]
+offset_left = 565.0
+offset_top = 343.0
+offset_right = 708.0
+offset_bottom = 382.0
+theme_override_constants/line_spacing = 1
+theme_override_font_sizes/font_size = 28
+text = "REPORTAR"
+
+[connection signal="pressed" from="Bregresar" to="." method="_on_bregresar_pressed"]
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="Reportar" to="." method="_on_reportar_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b31njg41u8a86"]
+[gd_scene load_steps=14 format=3 uid="uid://b31njg41u8a86"]
 
 [ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imagenes/Fondos/5.png" id="1_l5yx4"]
 [ext_resource type="Script" uid="uid://qijg2s1odlgi" path="res://Scripts/acto_2.gd" id="1_v5svv"]
@@ -7,10 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imagenes/Personajes/Pagente.png" id="4_wtvos"]
 [ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imagenes/Botones/boton-de-emergencia.png" id="6_7fb8e"]
 [ext_resource type="AudioStream" uid="uid://b8h01o8i6sa1w" path="res://Audio/Codigomorse.wav" id="6_wtvos"]
-[ext_resource type="Texture2D" uid="uid://c7hmvvv1dqkvh" path="res://Imagenes/Botones/escaner-de-ojos.png" id="7_c0lj2"]
 [ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imagenes/Botones/globos-de-texto.png" id="8_k366d"]
 [ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="9_iigoo"]
-[ext_resource type="AudioStream" uid="uid://dsmqd65q0cuxf" path="res://Audio/cyber-intro-67208.mp3" id="11_7fb8e"]
+[ext_resource type="AudioStream" uid="uid://dp3kq8t2tsbv3" path="res://Audio/mist.wav" id="11_ovuc0"]
 [ext_resource type="Texture2D" uid="uid://hgm0jjflkm8t" path="res://Imagenes/Botones/Bcontinuar.png" id="11_wtvos"]
 [ext_resource type="AudioStream" uid="uid://cergjdqc7dw6c" path="res://Audio/Botón.mp3" id="13_ovuc0"]
 
@@ -29,24 +28,27 @@ animations = [{
 script = ExtResource("1_v5svv")
 
 [node name="Fgris" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -427.0
+offset_top = -282.0
+offset_right = 1493.0
+offset_bottom = 798.0
+scale = Vector2(1.36945, 1.71834)
 texture = ExtResource("1_l5yx4")
 
 [node name="Fazul" type="TextureRect" parent="."]
-offset_left = -3.0
-offset_top = 248.0
-offset_right = 3782.0
-offset_bottom = 12880.0
-scale = Vector2(0.342514, 0.0376051)
+offset_left = -444.0
+offset_top = 259.0
+offset_right = 3341.0
+offset_bottom = 12891.0
+scale = Vector2(0.698146, 0.0397042)
 texture = ExtResource("2_tynjl")
 
 [node name="FNegro" type="TextureRect" parent="."]
-offset_left = 3.0
-offset_top = -1.0
-offset_right = 6627.0
-offset_bottom = 4672.0
-scale = Vector2(0.199288, 0.0743178)
+offset_left = -359.0
+offset_top = 2.0
+offset_right = 6265.0
+offset_bottom = 4675.0
+scale = Vector2(0.343618, 0.0834391)
 texture = ExtResource("3_v5svv")
 
 [node name="SonidoDialogo" type="AudioStreamPlayer2D" parent="."]
@@ -63,11 +65,11 @@ autoplay = "Botones"
 frame_progress = 0.488442
 
 [node name="Gcdebotones" type="GridContainer" parent="."]
-offset_left = 319.0
-offset_top = 143.0
-offset_right = 2151.0
-offset_bottom = 767.0
-scale = Vector2(0.345608, 0.261607)
+offset_left = 408.0
+offset_top = 106.0
+offset_right = 2240.0
+offset_bottom = 730.0
+scale = Vector2(0.434916, 0.370624)
 theme_override_constants/h_separation = 136
 theme_override_constants/v_separation = 27
 columns = 3
@@ -78,16 +80,6 @@ icon = ExtResource("6_7fb8e")
 flat = true
 
 [node name="TypeSFX" type="AudioStreamPlayer2D" parent="Gcdebotones/Breportar"]
-position = Vector2(-923.011, -546.621)
-scale = Vector2(2.89345, 3.82253)
-stream = ExtResource("13_ovuc0")
-
-[node name="BEscanner" type="Button" parent="Gcdebotones"]
-layout_mode = 2
-icon = ExtResource("7_c0lj2")
-flat = true
-
-[node name="TypeSFX" type="AudioStreamPlayer2D" parent="Gcdebotones/BEscanner"]
 position = Vector2(-923.011, -546.621)
 scale = Vector2(2.89345, 3.82253)
 stream = ExtResource("13_ovuc0")
@@ -105,13 +97,12 @@ stream = ExtResource("13_ovuc0")
 [node name="LReportar" type="Label" parent="Gcdebotones"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
-text = "REPORTAR "
 horizontal_alignment = 1
 
 [node name="LEscanner" type="Label" parent="Gcdebotones"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
-text = "ESCANNER"
+text = "Reportar "
 horizontal_alignment = 1
 uppercase = true
 
@@ -122,10 +113,12 @@ text = "MENGER"
 horizontal_alignment = 1
 
 [node name="MusicBG" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_7fb8e")
+stream = ExtResource("11_ovuc0")
 autoplay = true
 
 [node name="ToolSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_ovuc0")
+autoplay = true
 
 [node name="TypingTimer" type="Timer" parent="."]
 
@@ -136,12 +129,12 @@ scale = Vector2(0.0990152, 0.0872483)
 icon = ExtResource("9_iigoo")
 flat = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Siguiente" type="Button" parent="."]
 offset_left = 1035.0
 offset_top = 359.0
 offset_right = 1502.0
 offset_bottom = 835.0
-scale = Vector2(0.139683, 0.13198)
+scale = Vector2(0.270528, 0.210273)
 icon = ExtResource("11_wtvos")
 flat = true
 
@@ -150,7 +143,7 @@ position = Vector2(639, 357)
 scale = Vector2(3.70143, 3.49818)
 
 [connection signal="pressed" from="Gcdebotones/Breportar" to="." method="_on_breportar_pressed"]
-[connection signal="pressed" from="Gcdebotones/BEscanner" to="." method="_on_bescanner_pressed"]
 [connection signal="pressed" from="Gcdebotones/BMenger" to="." method="_on_bmenger_pressed"]
 [connection signal="pressed" from="Bregresar" to="." method="_on_bregresar_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="Siguiente" to="." method="_on_button_pressed"]

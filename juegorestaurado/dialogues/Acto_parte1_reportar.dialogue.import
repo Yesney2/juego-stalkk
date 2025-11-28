@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bb2dhe02ymjio"
+path="res://.godot/imported/Acto_parte1_reportar.dialogue-843268b54d63ecc29e1d3df660047424.tres"
+
+[deps]
+
+source_file="res://dialogues/Acto_parte1_reportar.dialogue"
+dest_files=["res://.godot/imported/Acto_parte1_reportar.dialogue-843268b54d63ecc29e1d3df660047424.tres"]
+
+[params]
+
+defaults=true

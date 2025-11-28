@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://brjty8nmihqey" path="res://Imagenes/Fondos/Captura de pantalla 2025-10-21 105550.png" id="2_l2jgd"]
 [ext_resource type="Texture2D" uid="uid://1ppx2vkyyeo5" path="res://Imagenes/Fondos/logo.jpg" id="2_nbaqw"]
 [ext_resource type="Texture2D" uid="uid://3jsvkmdipcdp" path="res://Imagenes/Botones/start-button_6077645-removebg-preview.png" id="3_l2jgd"]
-[ext_resource type="AudioStream" uid="uid://dsf503qfnytkk" path="res://Audio/gotabutton.wav" id="5_lvdld"]
-[ext_resource type="AudioStream" uid="uid://er88p44pso28" path="res://Audio/Fondo 1.mp3" id="6_lvdld"]
+[ext_resource type="AudioStream" uid="uid://cergjdqc7dw6c" path="res://Audio/Botón.mp3" id="5_l2jgd"]
+[ext_resource type="AudioStream" uid="uid://bmo44k65exf6d" path="res://Audio/Fondo_soundtrack spy.wav" id="5_lvdld"]
 
 [node name="Inicio" type="Control"]
 layout_mode = 3
@@ -18,19 +18,19 @@ script = ExtResource("1_yoswc")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -92.0
-offset_top = -48.0
-offset_right = 997.0
-offset_bottom = 553.0
+offset_left = -570.0
+offset_top = -158.0
+offset_right = 1301.0
+offset_bottom = 443.0
 scale = Vector2(1.40984, 1.47931)
 texture = ExtResource("2_l2jgd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 253.0
-offset_top = 65.0
-offset_right = 1392.0
-offset_bottom = 1011.0
+offset_left = 285.0
+offset_top = 31.0
+offset_right = 1424.0
+offset_bottom = 977.0
 scale = Vector2(0.637619, 0.639797)
 texture = ExtResource("2_nbaqw")
 
@@ -41,10 +41,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -160.0
-offset_top = -224.0
-offset_right = 348.0
-offset_bottom = 284.0
+offset_left = -236.0
+offset_top = -264.0
+offset_right = 272.0
+offset_bottom = 244.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.549213, 0.398458)
@@ -52,15 +52,14 @@ icon = ExtResource("3_l2jgd")
 flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button"]
-stream = ExtResource("5_lvdld")
-autoplay = true
+stream = ExtResource("5_l2jgd")
 max_polyphony = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(634, 355)
+position = Vector2(638, 356)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_lvdld")
+stream = ExtResource("5_lvdld")
 autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

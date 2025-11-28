@@ -12,16 +12,16 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_twqoo"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 50.0,
 "texture": ExtResource("4_uo532")
 }, {
-"duration": 1.0,
+"duration": 50.0,
 "texture": ExtResource("5_sd6lr")
 }, {
-"duration": 1.0,
+"duration": 50.0,
 "texture": ExtResource("6_eynpd")
 }, {
-"duration": 1.0,
+"duration": 50.0,
 "texture": ExtResource("7_wlaga")
 }],
 "loop": true,
@@ -40,10 +40,12 @@ script = ExtResource("1_un8kp")
 
 [node name="fgym" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1024.0
-offset_bottom = 1024.0
+offset_left = -258.0
+offset_top = -112.0
+offset_right = 766.0
+offset_bottom = 912.0
 rotation = 0.000711513
-scale = Vector2(1.25952, 0.705249)
+scale = Vector2(1.80342, 0.995424)
 texture = ExtResource("2_775j8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

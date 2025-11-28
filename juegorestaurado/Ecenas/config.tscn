@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8r5474sd13r0"]
+[gd_scene load_steps=8 format=3 uid="uid://b8r5474sd13r0"]
 
 [ext_resource type="Script" uid="uid://ch5b1x4t1bedr" path="res://Scripts/config.gd" id="1_jh5oj"]
 [ext_resource type="Texture2D" uid="uid://bpc40hy878nwe" path="res://Imagenes/Fondos/6053836.jpg" id="1_u0s2d"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bi3w5b41yuuib" path="res://Imagenes/Botones/Back.png" id="5_8bllp"]
 [ext_resource type="Texture2D" uid="uid://1yt021emfsgy" path="res://Imagenes/Botones/Menos.png" id="5_f0a7u"]
 [ext_resource type="Texture2D" uid="uid://dkol1xstsmfrf" path="res://Imagenes/Botones/Mas.png" id="6_b2o7d"]
+[ext_resource type="AudioStream" uid="uid://er88p44pso28" path="res://Audio/Fondo 1.mp3" id="7_b2o7d"]
 
 [node name="Config" type="Control"]
 layout_mode = 3
@@ -18,58 +19,81 @@ script = ExtResource("1_jh5oj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -4.0
-offset_top = 2.0
-offset_right = 2996.0
-offset_bottom = 2002.0
+offset_left = -554.0
+offset_top = -416.0
+offset_right = 4802.0
+offset_bottom = 4504.0
 scale = Vector2(0.457013, 0.353646)
 texture = ExtResource("1_u0s2d")
 
 [node name="Salir" type="Button" parent="."]
 layout_mode = 0
-offset_left = 400.0
-offset_top = 338.0
-offset_right = 1189.0
-offset_bottom = 691.0
+offset_left = 487.0
+offset_top = 489.0
+offset_right = 1276.0
+offset_bottom = 842.0
 scale = Vector2(0.426319, 0.496238)
 icon = ExtResource("3_8bllp")
 flat = true
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
-offset_left = 417.0
-offset_top = 227.0
-offset_right = 1147.0
-offset_bottom = 580.0
+offset_left = 513.0
+offset_top = 351.0
+offset_right = 1243.0
+offset_bottom = 704.0
 scale = Vector2(0.415718, 0.349516)
 icon = ExtResource("5_8bllp")
 flat = true
 
-[node name="HSlider" type="HSlider" parent="."]
-layout_mode = 0
-offset_left = 443.0
-offset_top = 130.0
-offset_right = 553.0
-offset_bottom = 166.0
-scale = Vector2(2.40075, 1.96468)
-max_value = 1.5
-step = 0.001
-value = 1.5
-
 [node name="Menos" type="Sprite2D" parent="."]
-position = Vector2(358, 160)
+position = Vector2(449, 160)
 scale = Vector2(0.370934, -0.284791)
 texture = ExtResource("5_f0a7u")
 
 [node name="Mas" type="Sprite2D" parent="."]
-position = Vector2(759, 164)
+position = Vector2(852, 170)
 scale = Vector2(0.34548, 0.317597)
 texture = ExtResource("6_b2o7d")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(643, 361)
+position = Vector2(643, 357)
 
-[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
-[connection signal="pressed" from="Salir" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
-[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 108.0
+offset_right = 643.0
+offset_bottom = 206.0
+scale = Vector2(2.2616, 1.76588)
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "   VOLUMEN "
+
+[node name="Volumen" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quitar sonido"
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer"]
+modulate = Color(1, 0.427451, 1, 1)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.768627, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 4
+theme_override_constants/check_v_offset = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_b2o7d")
+autoplay = true
+
+[connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="value_changed" from="VBoxContainer/Volumen" to="." method="_on_Volumen_value_changed"]
+[connection signal="toggled" from="VBoxContainer/CheckBox" to="." method="_on_CheckBox_toggled"]

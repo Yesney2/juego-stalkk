@@ -1,42 +1,42 @@
-[gd_scene load_steps=14 format=3 uid="uid://cj8kqhfiotsvb"]
+[gd_scene load_steps=12 format=3 uid="uid://cj8kqhfiotsvb"]
 
 [ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imagenes/Fondos/5.png" id="1_od257"]
 [ext_resource type="Script" uid="uid://mco4wm8fnxt0" path="res://Scripts/acto_3.gd" id="1_r20s5"]
 [ext_resource type="Texture2D" uid="uid://dyaonata51lh1" path="res://Imagenes/Fondos/pared-con-textura-de-hormigon-azul-marino-solido.jpg" id="2_g0ivk"]
 [ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imagenes/Fondos/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="3_xfyd8"]
 [ext_resource type="Texture2D" uid="uid://cfnmj56tnuhpq" path="res://Imagenes/Personajes/Pagente.png" id="4_uwwt4"]
-[ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imagenes/Botones/boton-de-emergencia.png" id="6_i2lju"]
-[ext_resource type="Texture2D" uid="uid://c7hmvvv1dqkvh" path="res://Imagenes/Botones/escaner-de-ojos.png" id="7_jgkxo"]
-[ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imagenes/Botones/globos-de-texto.png" id="8_1ru16"]
 [ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="9_32xvr"]
 [ext_resource type="Texture2D" uid="uid://cdhhpkmyo7pf5" path="res://Imagenes/Personajes/1.png" id="9_uwwt4"]
 [ext_resource type="Texture2D" uid="uid://cxm5c60nm0rtc" path="res://Imagenes/Personajes/2.png" id="10_r20s5"]
 [ext_resource type="Texture2D" uid="uid://dqpyvp1bd3nh2" path="res://Imagenes/Personajes/3.png" id="11_i2lju"]
 [ext_resource type="Texture2D" uid="uid://6mrqa8a8c6g5" path="res://Imagenes/Botones/BotonInicio.png" id="13_r20s5"]
+[ext_resource type="AudioStream" uid="uid://dp3kq8t2tsbv3" path="res://Audio/mist.wav" id="14_i2lju"]
 
 [node name="acto_3" type="Node2D"]
 script = ExtResource("1_r20s5")
 
 [node name="Fgris" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.669317, 0.684103)
+offset_left = -311.0
+offset_top = -116.0
+offset_right = 1609.0
+offset_bottom = 964.0
+scale = Vector2(1.17506, 1.24727)
 texture = ExtResource("1_od257")
 
 [node name="Fazul" type="TextureRect" parent="."]
-offset_left = 3.0
-offset_top = 269.0
-offset_right = 3788.0
-offset_bottom = 2792.0
-scale = Vector2(0.345883, 0.0569424)
+offset_left = -320.0
+offset_top = 274.0
+offset_right = 3465.0
+offset_bottom = 2797.0
+scale = Vector2(0.606204, 0.0922702)
 texture = ExtResource("2_g0ivk")
 
 [node name="TextureRect3" type="TextureRect" parent="."]
-offset_left = 4.0
-offset_top = 725.0
-offset_right = 6628.0
-offset_bottom = 5141.0
-scale = Vector2(0.198372, -0.0871889)
+offset_left = -310.0
+offset_top = 854.0
+offset_right = 6314.0
+offset_bottom = 5270.0
+scale = Vector2(0.403072, -0.11295)
 texture = ExtResource("3_xfyd8")
 
 [node name="Pinguino" type="Sprite2D" parent="."]
@@ -44,56 +44,12 @@ position = Vector2(136, 241)
 scale = Vector2(0.534091, 0.45)
 texture = ExtResource("4_uwwt4")
 
-[node name="Gcbotones" type="GridContainer" parent="."]
-offset_left = 286.0
-offset_top = 398.0
-offset_right = 1854.0
-offset_bottom = 999.0
-scale = Vector2(0.340886, 0.269119)
-theme_override_constants/h_separation = 136
-theme_override_constants/v_separation = 27
-columns = 3
-
-[node name="Breportar" type="Button" parent="Gcbotones"]
-layout_mode = 2
-icon = ExtResource("6_i2lju")
-flat = true
-
-[node name="BEscanner" type="Button" parent="Gcbotones"]
-layout_mode = 2
-icon = ExtResource("7_jgkxo")
-flat = true
-
-[node name="BMenger" type="Button" parent="Gcbotones"]
-layout_mode = 2
-icon = ExtResource("8_1ru16")
-flat = true
-
-[node name="LReportar" type="Label" parent="Gcbotones"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 56
-text = "REPORTAR "
-horizontal_alignment = 1
-
-[node name="LEscanner" type="Label" parent="Gcbotones"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 56
-text = "ESCANNER"
-horizontal_alignment = 1
-uppercase = true
-
-[node name="LMenger" type="Label" parent="Gcbotones"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 56
-text = "MENGER"
-horizontal_alignment = 1
-
 [node name="Gcperfiles" type="GridContainer" parent="."]
-offset_left = 268.0
-offset_top = 30.9999
-offset_right = 2100.0
-offset_bottom = 655.0
-scale = Vector2(0.257678, 0.228751)
+offset_left = 266.0
+offset_top = 27.0
+offset_right = 3160.0
+offset_bottom = 1107.0
+scale = Vector2(0.328967, 0.324243)
 theme_override_constants/h_separation = 136
 theme_override_constants/v_separation = 27
 columns = 3
@@ -134,7 +90,7 @@ horizontal_alignment = 1
 [node name="Bregresar" type="Button" parent="."]
 offset_right = 8.0
 offset_bottom = 8.0
-scale = Vector2(0.0990152, 0.0872483)
+scale = Vector2(0.168993, 0.158602)
 icon = ExtResource("9_32xvr")
 flat = true
 
@@ -142,17 +98,18 @@ flat = true
 position = Vector2(642, 364)
 
 [node name="Iniciar" type="Button" parent="."]
-offset_left = 950.0
-offset_top = 315.0
-offset_right = 1458.0
-offset_bottom = 823.0
-scale = Vector2(0.393404, 0.2994)
+offset_left = 494.0
+offset_top = 437.0
+offset_right = 1002.0
+offset_bottom = 945.0
+scale = Vector2(0.790384, 0.501368)
 icon = ExtResource("13_r20s5")
 flat = true
 
-[connection signal="pressed" from="Gcbotones/Breportar" to="." method="_on_breportar_pressed"]
-[connection signal="pressed" from="Gcbotones/BEscanner" to="." method="_on_b_escanner_pressed"]
-[connection signal="pressed" from="Gcbotones/BMenger" to="." method="_on_b_menger_pressed"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_i2lju")
+autoplay = true
+
 [connection signal="pressed" from="Gcperfiles/BScarlett" to="." method="_on_bscarlett_pressed"]
 [connection signal="pressed" from="Gcperfiles/BJeniffer" to="." method="_on_bjeniffer_pressed"]
 [connection signal="pressed" from="Gcperfiles/BFernando" to="." method="_on_bfernando_pressed"]

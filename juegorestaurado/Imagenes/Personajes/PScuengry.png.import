@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn3b0crve2ra2"
-path="res://.godot/imported/90Z_2109.w032.n003.95B.p1.95-removebg-preview.png-6bf6290f8a5537bcf14901964061db79.ctex"
+uid="uid://dsnjdv44n6tki"
+path="res://.godot/imported/PScuengry.png-3196c1a808b8ac6917c7c053b0584987.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/Botones/90Z_2109.w032.n003.95B.p1.95-removebg-preview.png"
-dest_files=["res://.godot/imported/90Z_2109.w032.n003.95B.p1.95-removebg-preview.png-6bf6290f8a5537bcf14901964061db79.ctex"]
+source_file="res://Imagenes/Personajes/PScuengry.png"
+dest_files=["res://.godot/imported/PScuengry.png-3196c1a808b8ac6917c7c053b0584987.ctex"]
 
 [params]
 

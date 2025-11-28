@@ -46,3 +46,13 @@ func _on_b_menger_pressed() -> void:
 
 func _on_iniciar_pressed() -> void:
 	_play_and_switch(snd_click, "res://Ecenas/Startplay.tscn")
+	
+func _ready() -> void:
+	GameData.cargar()
+	GameData.ultima_escena = "res://Ecenas/Startplay.tscn" # cambia la ruta a la escena actual
+	GameData.guardar()
+
+
+	# ... el resto de tu código ...
+
+	

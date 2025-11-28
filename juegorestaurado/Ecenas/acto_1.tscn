@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dbl3yt6xq44yi"]
+[gd_scene load_steps=14 format=3 uid="uid://dbl3yt6xq44yi"]
 
 [ext_resource type="Script" uid="uid://daplq3l7hbp30" path="res://Scripts/acto_1.gd" id="1_id2ws"]
 [ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imagenes/Fondos/5.png" id="1_npgcn"]
@@ -9,8 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bc80pgcjdtwnw" path="res://Imagenes/Personajes/Ppensando.png" id="6_oswgf"]
 [ext_resource type="Texture2D" uid="uid://nn1pvhft7tfh" path="res://Imagenes/Personajes/Pseñalando.png" id="7_8k1yp"]
 [ext_resource type="Texture2D" uid="uid://hgm0jjflkm8t" path="res://Imagenes/Botones/Bcontinuar.png" id="7_31ssc"]
-[ext_resource type="AudioStream" uid="uid://dsmqd65q0cuxf" path="res://Audio/cyber-intro-67208.mp3" id="8_1yu0i"]
 [ext_resource type="Texture2D" uid="uid://cprq2rmwlofwc" path="res://Imagenes/Botones/88d827ed-2522-4caa-8c44-9ad806fc4026-removebg-preview.png" id="10_7fqsx"]
+[ext_resource type="AudioStream" uid="uid://dp3kq8t2tsbv3" path="res://Audio/mist.wav" id="11_dh6wm"]
+[ext_resource type="Texture2D" uid="uid://bwr3ud22qafr" path="res://Imagenes/Botones/Menu.png" id="12_dh6wm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oswgf"]
 animations = [{
@@ -44,11 +45,11 @@ animations = [{
 script = ExtResource("1_id2ws")
 
 [node name="FonNegro" type="TextureRect" parent="."]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 1919.0
-offset_bottom = 1079.0
-scale = Vector2(0.784708, 0.754965)
+offset_left = -333.0
+offset_top = -150.0
+offset_right = 1587.0
+offset_bottom = 930.0
+scale = Vector2(1.08743, 1.18517)
 texture = ExtResource("1_npgcn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -65,14 +66,14 @@ layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_hnntw")
 
 [node name="Pinguino" type="AnimatedSprite2D" parent="."]
-position = Vector2(180, 220)
+position = Vector2(264, 257)
 sprite_frames = SubResource("SpriteFrames_oswgf")
 animation = &"Saludo"
 frame = 1
 
 [node name="SonidoDialogo" type="AudioStreamPlayer2D" parent="Pinguino"]
 process_mode = 1
-stream = ExtResource("8_1yu0i")
+stream = ExtResource("11_dh6wm")
 volume_db = 24.0
 autoplay = true
 max_distance = 1273.0
@@ -85,25 +86,39 @@ offset_left = 4.0
 offset_top = 370.0
 offset_right = 3789.0
 offset_bottom = 2893.0
-scale = Vector2(0.342834, 0.158788)
+scale = Vector2(0.472585, 0.17192)
 texture = ExtResource("4_id2ws")
 
 [node name="Siguiente" type="Button" parent="."]
-offset_left = 1171.0
-offset_top = 377.0
-offset_right = 1638.0
-offset_bottom = 853.0
+offset_left = 1182.0
+offset_top = 373.0
+offset_right = 1649.0
+offset_bottom = 849.0
 scale = Vector2(0.214637, 0.15125)
 icon = ExtResource("7_31ssc")
+flat = true
 
 [node name="SonFon" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_dh6wm")
+autoplay = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Regresar" type="Button" parent="."]
 offset_right = 8.0
 offset_bottom = 8.0
 scale = Vector2(0.151207, 0.14063)
 icon = ExtResource("10_7fqsx")
 flat = true
 
+[node name="menu" type="Button" parent="."]
+offset_left = 1142.0
+offset_top = -5.0
+offset_right = 1650.0
+offset_bottom = 503.0
+scale = Vector2(0.273715, 0.265551)
+icon = ExtResource("12_dh6wm")
+flat = true
+
 [connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Regresar" to="." method="_on_regresar_pressed"]
+[connection signal="pressed" from="Regresar" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

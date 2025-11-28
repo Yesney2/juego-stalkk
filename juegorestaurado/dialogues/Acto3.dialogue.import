@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://fvkt5jju80rw"
+path="res://.godot/imported/Acto3.dialogue-b18665b406c8f42bc9d82a53a034597a.tres"
+
+[deps]
+
+source_file="res://dialogues/Acto3.dialogue"
+dest_files=["res://.godot/imported/Acto3.dialogue-b18665b406c8f42bc9d82a53a034597a.tres"]
+
+[params]
+
+defaults=true

@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmi4u481j2kgu"]
+[gd_scene load_steps=12 format=3 uid="uid://cmi4u481j2kgu"]
 
 [ext_resource type="Script" uid="uid://dkfjdtwiaa7pf" path="res://Scripts/Startplay.gd" id="1_4lds1"]
 [ext_resource type="Texture2D" uid="uid://dr1m88v5oq5xr" path="res://Imagenes/Fondos/5.png" id="2_d1lv6"]
 [ext_resource type="Texture2D" uid="uid://d0wovd64lbpm4" path="res://Imagenes/Fondos/fondo-de-textura-de-pared-pintada-de-negro.jpg" id="4_87gsw"]
 [ext_resource type="AudioStream" uid="uid://cergjdqc7dw6c" path="res://Audio/Botón.mp3" id="5_hm7d5"]
 [ext_resource type="Texture2D" uid="uid://b8ra5es1vwyc7" path="res://Imagenes/Botones/boton-de-emergencia.png" id="6_5ds00"]
-[ext_resource type="Texture2D" uid="uid://c7hmvvv1dqkvh" path="res://Imagenes/Botones/escaner-de-ojos.png" id="7_v7k8y"]
 [ext_resource type="Texture2D" uid="uid://dih5omimy6ecc" path="res://Imagenes/Botones/globos-de-texto.png" id="8_beuy1"]
 [ext_resource type="Texture2D" uid="uid://cdhhpkmyo7pf5" path="res://Imagenes/Personajes/1.png" id="9_qtre3"]
 [ext_resource type="Texture2D" uid="uid://cxm5c60nm0rtc" path="res://Imagenes/Personajes/2.png" id="10_wgsh0"]
@@ -17,25 +16,27 @@
 script = ExtResource("1_4lds1")
 
 [node name="Fgris" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.830788, 0.763873)
+offset_left = -164.0
+offset_top = -82.0
+offset_right = 1756.0
+offset_bottom = 998.0
+scale = Vector2(1.05375, 0.996297)
 texture = ExtResource("2_d1lv6")
 
 [node name="TextureRect3" type="TextureRect" parent="."]
-offset_left = -6.0
-offset_top = 713.0
-offset_right = 6618.0
-offset_bottom = 5129.0
-scale = Vector2(0.205972, -0.0704664)
+offset_left = -347.0
+offset_top = 714.0
+offset_right = 6277.0
+offset_bottom = 5130.0
+scale = Vector2(0.356337, -0.0763819)
 texture = ExtResource("4_87gsw")
 
 [node name="Gcbotones" type="GridContainer" parent="."]
-offset_left = 313.0
-offset_top = 464.0
-offset_right = 2145.0
-offset_bottom = 1088.0
-scale = Vector2(0.340886, 0.269119)
+offset_left = 351.0
+offset_top = 437.0
+offset_right = 2183.0
+offset_bottom = 1061.0
+scale = Vector2(0.464045, 0.374834)
 theme_override_constants/h_separation = 136
 theme_override_constants/v_separation = 27
 columns = 3
@@ -46,14 +47,6 @@ icon = ExtResource("6_5ds00")
 flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Gcbotones/Breportar"]
-stream = ExtResource("5_hm7d5")
-
-[node name="BEscanner" type="Button" parent="Gcbotones"]
-layout_mode = 2
-icon = ExtResource("7_v7k8y")
-flat = true
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Gcbotones/BEscanner"]
 stream = ExtResource("5_hm7d5")
 
 [node name="BMenger" type="Button" parent="Gcbotones"]
@@ -67,13 +60,12 @@ stream = ExtResource("5_hm7d5")
 [node name="LReportar" type="Label" parent="Gcbotones"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
-text = "REPORTAR "
 horizontal_alignment = 1
 
 [node name="LEscanner" type="Label" parent="Gcbotones"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
-text = "ESCANNER"
+text = "Reportar"
 horizontal_alignment = 1
 uppercase = true
 
@@ -84,11 +76,11 @@ text = "MENGER"
 horizontal_alignment = 1
 
 [node name="Gcperfiles" type="GridContainer" parent="."]
-offset_left = 283.0
-offset_top = 74.0
-offset_right = 3177.0
-offset_bottom = 1154.0
-scale = Vector2(0.257678, 0.228751)
+offset_left = 232.0
+offset_top = 70.0
+offset_right = 3126.0
+offset_bottom = 1150.0
+scale = Vector2(0.287039, 0.260199)
 theme_override_constants/h_separation = 136
 theme_override_constants/v_separation = 27
 columns = 3
@@ -129,7 +121,7 @@ horizontal_alignment = 1
 [node name="Bregresar" type="Button" parent="."]
 offset_right = 8.0
 offset_bottom = 8.0
-scale = Vector2(0.0990152, 0.0872483)
+scale = Vector2(0.20243, 0.167144)
 icon = ExtResource("12_axhtr")
 flat = true
 
@@ -141,7 +133,6 @@ stream = ExtResource("11_j6erx")
 autoplay = true
 
 [connection signal="pressed" from="Gcbotones/Breportar" to="." method="_on_breportar_pressed"]
-[connection signal="pressed" from="Gcbotones/BEscanner" to="." method="_on_b_escanner_pressed"]
 [connection signal="pressed" from="Gcbotones/BMenger" to="." method="_on_b_menger_pressed"]
 [connection signal="pressed" from="Gcperfiles/BScarlett" to="." method="_on_bscarlett_pressed"]
 [connection signal="pressed" from="Gcperfiles/BJeniffer" to="." method="_on_bjeniffer_pressed"]
